@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMINISTRADOR">
+    <Key>
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cedula" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellido1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Fecha_Ingreso_TECres" Type="datetime" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ANUNCIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Clasificacion" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Aprobado" Type="bit" />
+    <Property Name="Tarjeta_Credito" Type="int" Nullable="false" />
+    <Property Name="Visitas" Type="int" />
+    <Property Name="Fecha_Inicio" Type="datetime" Nullable="false" />
+    <Property Name="Fecha_Fin" Type="datetime" Nullable="false" />
+    <Property Name="ID_Factura" Type="int" />
+    <Property Name="ID_Propiedad" Type="int" Nullable="false" />
+    <Property Name="Cedula_Vendedor" Type="int" Nullable="false" />
+    <Property Name="Tipo_Anuncio" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ID_Publico_Meta" Type="int" Nullable="false" />
+    <Property Name="Cedula_Admin" Type="int" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cedula" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellido1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Nacionalidad" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Perfil_Cliente" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMPRADOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellido1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Genero" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Ingresos_Mes" Type="int" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ID_Ubicacion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FACTURA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Monto" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FOTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dir_URL" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID_Propiedad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MENSAJE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID_Comprador" Type="int" Nullable="false" />
+    <Property Name="Cedula_Cliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OCUPACION">
+    <Key>
+      <PropertyRef Name="Nombre" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERFIL_DE_CLIENTE">
+    <Key>
+      <PropertyRef Name="Nombre" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROPIEDAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Precio" Type="int" Nullable="false" />
+    <Property Name="Direccion_Exacta" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Parqueo_Visitas" Type="bit" Nullable="false" />
+    <Property Name="Niveles" Type="int" Nullable="false" />
+    <Property Name="Piscina" Type="bit" Nullable="false" />
+    <Property Name="Gimnasio" Type="bit" Nullable="false" />
+    <Property Name="Tamano_Terreno" Type="int" Nullable="false" />
+    <Property Name="Tamano_Construccion" Type="int" Nullable="false" />
+    <Property Name="Cant_Habitaciones" Type="int" Nullable="false" />
+    <Property Name="Cant_Banos" Type="int" Nullable="false" />
+    <Property Name="Cant_Parqueos" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="350" Nullable="false" />
+    <Property Name="Foto_Principal" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID_Ubicacion" Type="int" Nullable="false" />
+    <Property Name="Nombre_Inmueble" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cedula_Cliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PUBLICO_META">
+    <Key>
+      <PropertyRef Name="Nombre" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Genero" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ingresos" Type="int" Nullable="false" />
+    <Property Name="Edad_Min" Type="int" Nullable="false" />
+    <Property Name="Edad_Max" Type="int" Nullable="false" />
+    <Property Name="ID_Ubicacion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIENE_OCUPACION">
+    <Key>
+      <PropertyRef Name="ID_Comprador" />
+      <PropertyRef Name="Ocupacion" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_Comprador" Type="int" Nullable="false" />
+    <Property Name="Ocupacion" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIENE_PISO">
+    <Key>
+      <PropertyRef Name="ID_Propiedad" />
+      <PropertyRef Name="Tipo_Piso" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_Propiedad" Type="int" Nullable="false" />
+    <Property Name="Tipo_Piso" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_ANUNCIO">
+    <Key>
+      <PropertyRef Name="Nombre" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Costo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_INMUEBLE">
+    <Key>
+      <PropertyRef Name="Nombre" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_PISO">
+    <Key>
+      <PropertyRef Name="Nombre" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UBICACION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Provincia" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Canton" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Distrito" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VENDEDOR">
+    <Key>
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cedula" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellido1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Fecha_Ingreso" Type="datetime" Nullable="false" />
+    <Property Name="Cedula_Admin" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__ANUNCIO__Cedula___6383C8BA">
+    <End Role="VENDEDOR" Type="Self.VENDEDOR" Multiplicity="1" />
+    <End Role="ANUNCIO" Type="Self.ANUNCIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENDEDOR">
+        <PropertyRef Name="Cedula" />
+      </Principal>
+      <Dependent Role="ANUNCIO">
+        <PropertyRef Name="Cedula_Vendedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ANUNCIO__Cedula___656C112C">
+    <End Role="ADMINISTRADOR" Type="Self.ADMINISTRADOR" Multiplicity="0..1" />
+    <End Role="ANUNCIO" Type="Self.ANUNCIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMINISTRADOR">
+        <PropertyRef Name="Cedula" />
+      </Principal>
+      <Dependent Role="ANUNCIO">
+        <PropertyRef Name="Cedula_Admin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ANUNCIO__ID_Fact__619B8048">
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="0..1" />
+    <End Role="ANUNCIO" Type="Self.ANUNCIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FACTURA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ANUNCIO">
+        <PropertyRef Name="ID_Factura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ANUNCIO__ID_Prop__628FA481">
+    <End Role="PROPIEDAD" Type="Self.PROPIEDAD" Multiplicity="1" />
+    <End Role="ANUNCIO" Type="Self.ANUNCIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROPIEDAD">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ANUNCIO">
+        <PropertyRef Name="ID_Propiedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ANUNCIO__Tipo_An__6477ECF3">
+    <End Role="TIPO_ANUNCIO" Type="Self.TIPO_ANUNCIO" Multiplicity="1" />
+    <End Role="ANUNCIO" Type="Self.ANUNCIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_ANUNCIO">
+        <PropertyRef Name="Nombre" />
+      </Principal>
+      <Dependent Role="ANUNCIO">
+        <PropertyRef Name="Tipo_Anuncio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CLIENTE__Perfil___46E78A0C">
+    <End Role="PERFIL_DE_CLIENTE" Type="Self.PERFIL_DE_CLIENTE" Multiplicity="1" />
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERFIL_DE_CLIENTE">
+        <PropertyRef Name="Nombre" />
+      </Principal>
+      <Dependent Role="CLIENTE">
+        <PropertyRef Name="Perfil_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__COMPRADOR__ID_Ub__5165187F">
+    <End Role="UBICACION" Type="Self.UBICACION" Multiplicity="1" />
+    <End Role="COMPRADOR" Type="Self.COMPRADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBICACION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPRADOR">
+        <PropertyRef Name="ID_Ubicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FOTO__ID_Propied__4E88ABD4">
+    <End Role="PROPIEDAD" Type="Self.PROPIEDAD" Multiplicity="1" />
+    <End Role="FOTO" Type="Self.FOTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROPIEDAD">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FOTO">
+        <PropertyRef Name="ID_Propiedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MENSAJE__Cedula___5535A963">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="MENSAJE" Type="Self.MENSAJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="Cedula" />
+      </Principal>
+      <Dependent Role="MENSAJE">
+        <PropertyRef Name="Cedula_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MENSAJE__ID_Comp__5441852A">
+    <End Role="COMPRADOR" Type="Self.COMPRADOR" Multiplicity="1" />
+    <End Role="MENSAJE" Type="Self.MENSAJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPRADOR">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MENSAJE">
+        <PropertyRef Name="ID_Comprador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PROPIEDAD__Cedul__49C3F6B7">
+    <End Role="UBICACION" Type="Self.UBICACION" Multiplicity="1" />
+    <End Role="PROPIEDAD" Type="Self.PROPIEDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBICACION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPIEDAD">
+        <PropertyRef Name="ID_Ubicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PROPIEDAD__Cedul__4BAC3F29">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="PROPIEDAD" Type="Self.PROPIEDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="Cedula" />
+      </Principal>
+      <Dependent Role="PROPIEDAD">
+        <PropertyRef Name="Cedula_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PROPIEDAD__Nombr__4AB81AF0">
+    <End Role="TIPO_INMUEBLE" Type="Self.TIPO_INMUEBLE" Multiplicity="1" />
+    <End Role="PROPIEDAD" Type="Self.PROPIEDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_INMUEBLE">
+        <PropertyRef Name="Nombre" />
+      </Principal>
+      <Dependent Role="PROPIEDAD">
+        <PropertyRef Name="Nombre_Inmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PUBLICO_M__ID_Ub__5AEE82B9">
+    <End Role="UBICACION" Type="Self.UBICACION" Multiplicity="1" />
+    <End Role="PUBLICO_META" Type="Self.PUBLICO_META" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBICACION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PUBLICO_META">
+        <PropertyRef Name="ID_Ubicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TIENE_OCU__ID_Co__6C190EBB">
+    <End Role="COMPRADOR" Type="Self.COMPRADOR" Multiplicity="1" />
+    <End Role="TIENE_OCUPACION" Type="Self.TIENE_OCUPACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPRADOR">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TIENE_OCUPACION">
+        <PropertyRef Name="ID_Comprador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TIENE_OCU__Ocupa__6D0D32F4">
+    <End Role="OCUPACION" Type="Self.OCUPACION" Multiplicity="1" />
+    <End Role="TIENE_OCUPACION" Type="Self.TIENE_OCUPACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OCUPACION">
+        <PropertyRef Name="Nombre" />
+      </Principal>
+      <Dependent Role="TIENE_OCUPACION">
+        <PropertyRef Name="Ocupacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TIENE_PIS__ID_Pr__68487DD7">
+    <End Role="PROPIEDAD" Type="Self.PROPIEDAD" Multiplicity="1" />
+    <End Role="TIENE_PISO" Type="Self.TIENE_PISO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROPIEDAD">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TIENE_PISO">
+        <PropertyRef Name="ID_Propiedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TIENE_PIS__Tipo___693CA210">
+    <End Role="TIPO_PISO" Type="Self.TIPO_PISO" Multiplicity="1" />
+    <End Role="TIENE_PISO" Type="Self.TIENE_PISO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_PISO">
+        <PropertyRef Name="Nombre" />
+      </Principal>
+      <Dependent Role="TIENE_PISO">
+        <PropertyRef Name="Tipo_Piso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VENDEDOR__Cedula__5812160E">
+    <End Role="ADMINISTRADOR" Type="Self.ADMINISTRADOR" Multiplicity="1" />
+    <End Role="VENDEDOR" Type="Self.VENDEDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMINISTRADOR">
+        <PropertyRef Name="Cedula" />
+      </Principal>
+      <Dependent Role="VENDEDOR">
+        <PropertyRef Name="Cedula_Admin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TECresModelStoreContainer">
+    <EntitySet Name="ADMINISTRADOR" EntityType="Self.ADMINISTRADOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ANUNCIO" EntityType="Self.ANUNCIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPRADOR" EntityType="Self.COMPRADOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FACTURA" EntityType="Self.FACTURA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FOTO" EntityType="Self.FOTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MENSAJE" EntityType="Self.MENSAJE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OCUPACION" EntityType="Self.OCUPACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERFIL_DE_CLIENTE" EntityType="Self.PERFIL_DE_CLIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROPIEDAD" EntityType="Self.PROPIEDAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PUBLICO_META" EntityType="Self.PUBLICO_META" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIENE_OCUPACION" EntityType="Self.TIENE_OCUPACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIENE_PISO" EntityType="Self.TIENE_PISO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_ANUNCIO" EntityType="Self.TIPO_ANUNCIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_INMUEBLE" EntityType="Self.TIPO_INMUEBLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_PISO" EntityType="Self.TIPO_PISO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UBICACION" EntityType="Self.UBICACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VENDEDOR" EntityType="Self.VENDEDOR" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ANUNCIO__Cedula___6383C8BA" Association="Self.FK__ANUNCIO__Cedula___6383C8BA">
+      <End Role="VENDEDOR" EntitySet="VENDEDOR" />
+      <End Role="ANUNCIO" EntitySet="ANUNCIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ANUNCIO__Cedula___656C112C" Association="Self.FK__ANUNCIO__Cedula___656C112C">
+      <End Role="ADMINISTRADOR" EntitySet="ADMINISTRADOR" />
+      <End Role="ANUNCIO" EntitySet="ANUNCIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ANUNCIO__ID_Fact__619B8048" Association="Self.FK__ANUNCIO__ID_Fact__619B8048">
+      <End Role="FACTURA" EntitySet="FACTURA" />
+      <End Role="ANUNCIO" EntitySet="ANUNCIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ANUNCIO__ID_Prop__628FA481" Association="Self.FK__ANUNCIO__ID_Prop__628FA481">
+      <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
+      <End Role="ANUNCIO" EntitySet="ANUNCIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ANUNCIO__Tipo_An__6477ECF3" Association="Self.FK__ANUNCIO__Tipo_An__6477ECF3">
+      <End Role="TIPO_ANUNCIO" EntitySet="TIPO_ANUNCIO" />
+      <End Role="ANUNCIO" EntitySet="ANUNCIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CLIENTE__Perfil___46E78A0C" Association="Self.FK__CLIENTE__Perfil___46E78A0C">
+      <End Role="PERFIL_DE_CLIENTE" EntitySet="PERFIL_DE_CLIENTE" />
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__COMPRADOR__ID_Ub__5165187F" Association="Self.FK__COMPRADOR__ID_Ub__5165187F">
+      <End Role="UBICACION" EntitySet="UBICACION" />
+      <End Role="COMPRADOR" EntitySet="COMPRADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FOTO__ID_Propied__4E88ABD4" Association="Self.FK__FOTO__ID_Propied__4E88ABD4">
+      <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
+      <End Role="FOTO" EntitySet="FOTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MENSAJE__Cedula___5535A963" Association="Self.FK__MENSAJE__Cedula___5535A963">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="MENSAJE" EntitySet="MENSAJE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MENSAJE__ID_Comp__5441852A" Association="Self.FK__MENSAJE__ID_Comp__5441852A">
+      <End Role="COMPRADOR" EntitySet="COMPRADOR" />
+      <End Role="MENSAJE" EntitySet="MENSAJE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PROPIEDAD__Cedul__49C3F6B7" Association="Self.FK__PROPIEDAD__Cedul__49C3F6B7">
+      <End Role="UBICACION" EntitySet="UBICACION" />
+      <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PROPIEDAD__Cedul__4BAC3F29" Association="Self.FK__PROPIEDAD__Cedul__4BAC3F29">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PROPIEDAD__Nombr__4AB81AF0" Association="Self.FK__PROPIEDAD__Nombr__4AB81AF0">
+      <End Role="TIPO_INMUEBLE" EntitySet="TIPO_INMUEBLE" />
+      <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PUBLICO_M__ID_Ub__5AEE82B9" Association="Self.FK__PUBLICO_M__ID_Ub__5AEE82B9">
+      <End Role="UBICACION" EntitySet="UBICACION" />
+      <End Role="PUBLICO_META" EntitySet="PUBLICO_META" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TIENE_OCU__ID_Co__6C190EBB" Association="Self.FK__TIENE_OCU__ID_Co__6C190EBB">
+      <End Role="COMPRADOR" EntitySet="COMPRADOR" />
+      <End Role="TIENE_OCUPACION" EntitySet="TIENE_OCUPACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TIENE_OCU__Ocupa__6D0D32F4" Association="Self.FK__TIENE_OCU__Ocupa__6D0D32F4">
+      <End Role="OCUPACION" EntitySet="OCUPACION" />
+      <End Role="TIENE_OCUPACION" EntitySet="TIENE_OCUPACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TIENE_PIS__ID_Pr__68487DD7" Association="Self.FK__TIENE_PIS__ID_Pr__68487DD7">
+      <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
+      <End Role="TIENE_PISO" EntitySet="TIENE_PISO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TIENE_PIS__Tipo___693CA210" Association="Self.FK__TIENE_PIS__Tipo___693CA210">
+      <End Role="TIPO_PISO" EntitySet="TIPO_PISO" />
+      <End Role="TIENE_PISO" EntitySet="TIENE_PISO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VENDEDOR__Cedula__5812160E" Association="Self.FK__VENDEDOR__Cedula__5812160E">
+      <End Role="ADMINISTRADOR" EntitySet="ADMINISTRADOR" />
+      <End Role="VENDEDOR" EntitySet="VENDEDOR" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

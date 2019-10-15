@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4211ccacb33f42ce9b97b16e69aaf9dc" Name="Diagram1">
+        <EntityTypeShape EntityType="TECresModel.ADMINISTRADOR" Width="1.5" PointX="6" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.ANUNCIO" Width="1.5" PointX="8.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.CLIENTE" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.COMPRADOR" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.FACTURA" Width="1.5" PointX="6" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.FOTO" Width="1.5" PointX="8.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.MENSAJE" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.OCUPACION" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.PERFIL_DE_CLIENTE" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.PROPIEDAD" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.PUBLICO_META" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.TIENE_OCUPACION" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.TIENE_PISO" Width="1.5" PointX="11.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.TIPO_ANUNCIO" Width="1.5" PointX="6" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.TIPO_INMUEBLE" Width="1.5" PointX="3.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.TIPO_PISO" Width="1.5" PointX="9" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.UBICACION" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECresModel.VENDEDOR" Width="1.5" PointX="6" PointY="24.375" IsExpanded="true" />
+        <AssociationConnector Association="TECresModel.FK__ANUNCIO__Cedula___656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__VENDEDOR__Cedula__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__ANUNCIO__Cedula___6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__ANUNCIO__ID_Fact__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__ANUNCIO__ID_Prop__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__ANUNCIO__Tipo_An__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__CLIENTE__Perfil___46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__MENSAJE__Cedula___5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__PROPIEDAD__Cedul__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__COMPRADOR__ID_Ub__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__MENSAJE__ID_Comp__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__TIENE_OCU__ID_Co__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__FOTO__ID_Propied__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__TIENE_OCU__Ocupa__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__PROPIEDAD__Cedul__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__PROPIEDAD__Nombr__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__TIENE_PIS__ID_Pr__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__PUBLICO_M__ID_Ub__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="TECresModel.FK__TIENE_PIS__Tipo___693CA210" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
