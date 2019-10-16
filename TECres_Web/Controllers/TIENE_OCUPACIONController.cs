@@ -6,57 +6,50 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using DB_TECres;
 
 namespace TECres_Web.Controllers
 {
-    public class PUBLICO_METAController : ApiController
+    public class TIENE_OCUPACIONController : ApiController
     {
         private TECresEntities db = new TECresEntities();
 
-        public IHttpActionResult Options()
+        // GET: api/TIENE_OCUPACION
+        public IQueryable<TIENE_OCUPACION> GetTIENE_OCUPACION()
         {
-            HttpContext.Current.Response.AppendHeader("Allow", "GET,DELETE,PUT,POST,OPTIONS");
-            return Ok();
+            return db.TIENE_OCUPACION;
         }
 
-        // GET: api/PUBLICO_META
-        public IQueryable<PUBLICO_META> GetPUBLICO_META()
+        // GET: api/TIENE_OCUPACION/5
+        [ResponseType(typeof(TIENE_OCUPACION))]
+        public IHttpActionResult GetTIENE_OCUPACION(int id)
         {
-            return db.PUBLICO_META;
-        }
-
-        // GET: api/PUBLICO_META/5
-        [ResponseType(typeof(PUBLICO_META))]
-        public IHttpActionResult GetPUBLICO_META(string id)
-        {
-            PUBLICO_META pUBLICO_META = db.PUBLICO_META.Find(id);
-            if (pUBLICO_META == null)
+            TIENE_OCUPACION tIENE_OCUPACION = db.TIENE_OCUPACION.Find(id);
+            if (tIENE_OCUPACION == null)
             {
                 return NotFound();
             }
 
-            return Ok(pUBLICO_META);
+            return Ok(tIENE_OCUPACION);
         }
 
-        // PUT: api/PUBLICO_META/5
+        // PUT: api/TIENE_OCUPACION/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutPUBLICO_META(string id, PUBLICO_META pUBLICO_META)
+        public IHttpActionResult PutTIENE_OCUPACION(int id, TIENE_OCUPACION tIENE_OCUPACION)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != pUBLICO_META.Nombre)
+            if (id != tIENE_OCUPACION.ID_Comprador)
             {
                 return BadRequest();
             }
 
-            db.Entry(pUBLICO_META).State = EntityState.Modified;
+            db.Entry(tIENE_OCUPACION).State = EntityState.Modified;
 
             try
             {
@@ -64,7 +57,7 @@ namespace TECres_Web.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PUBLICO_METAExists(id))
+                if (!TIENE_OCUPACIONExists(id))
                 {
                     return NotFound();
                 }
@@ -77,16 +70,16 @@ namespace TECres_Web.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/PUBLICO_META
-        [ResponseType(typeof(PUBLICO_META))]
-        public IHttpActionResult PostPUBLICO_META(PUBLICO_META pUBLICO_META)
+        // POST: api/TIENE_OCUPACION
+        [ResponseType(typeof(TIENE_OCUPACION))]
+        public IHttpActionResult PostTIENE_OCUPACION(TIENE_OCUPACION tIENE_OCUPACION)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.PUBLICO_META.Add(pUBLICO_META);
+            db.TIENE_OCUPACION.Add(tIENE_OCUPACION);
 
             try
             {
@@ -94,7 +87,7 @@ namespace TECres_Web.Controllers
             }
             catch (DbUpdateException)
             {
-                if (PUBLICO_METAExists(pUBLICO_META.Nombre))
+                if (TIENE_OCUPACIONExists(tIENE_OCUPACION.ID_Comprador))
                 {
                     return Conflict();
                 }
@@ -104,23 +97,23 @@ namespace TECres_Web.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = pUBLICO_META.Nombre }, pUBLICO_META);
+            return CreatedAtRoute("DefaultApi", new { id = tIENE_OCUPACION.ID_Comprador }, tIENE_OCUPACION);
         }
 
-        // DELETE: api/PUBLICO_META/5
-        [ResponseType(typeof(PUBLICO_META))]
-        public IHttpActionResult DeletePUBLICO_META(string id)
+        // DELETE: api/TIENE_OCUPACION/5
+        [ResponseType(typeof(TIENE_OCUPACION))]
+        public IHttpActionResult DeleteTIENE_OCUPACION(int id)
         {
-            PUBLICO_META pUBLICO_META = db.PUBLICO_META.Find(id);
-            if (pUBLICO_META == null)
+            TIENE_OCUPACION tIENE_OCUPACION = db.TIENE_OCUPACION.Find(id);
+            if (tIENE_OCUPACION == null)
             {
                 return NotFound();
             }
 
-            db.PUBLICO_META.Remove(pUBLICO_META);
+            db.TIENE_OCUPACION.Remove(tIENE_OCUPACION);
             db.SaveChanges();
 
-            return Ok(pUBLICO_META);
+            return Ok(tIENE_OCUPACION);
         }
 
         protected override void Dispose(bool disposing)
@@ -132,9 +125,9 @@ namespace TECres_Web.Controllers
             base.Dispose(disposing);
         }
 
-        private bool PUBLICO_METAExists(string id)
+        private bool TIENE_OCUPACIONExists(int id)
         {
-            return db.PUBLICO_META.Count(e => e.Nombre == id) > 0;
+            return db.TIENE_OCUPACION.Count(e => e.ID_Comprador == id) > 0;
         }
     }
 }

@@ -6,57 +6,50 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using DB_TECres;
 
 namespace TECres_Web.Controllers
 {
-    public class PUBLICO_METAController : ApiController
+    public class VENDEDORController : ApiController
     {
         private TECresEntities db = new TECresEntities();
 
-        public IHttpActionResult Options()
+        // GET: api/VENDEDOR
+        public IQueryable<VENDEDOR> GetVENDEDOR()
         {
-            HttpContext.Current.Response.AppendHeader("Allow", "GET,DELETE,PUT,POST,OPTIONS");
-            return Ok();
+            return db.VENDEDOR;
         }
 
-        // GET: api/PUBLICO_META
-        public IQueryable<PUBLICO_META> GetPUBLICO_META()
+        // GET: api/VENDEDOR/5
+        [ResponseType(typeof(VENDEDOR))]
+        public IHttpActionResult GetVENDEDOR(int id)
         {
-            return db.PUBLICO_META;
-        }
-
-        // GET: api/PUBLICO_META/5
-        [ResponseType(typeof(PUBLICO_META))]
-        public IHttpActionResult GetPUBLICO_META(string id)
-        {
-            PUBLICO_META pUBLICO_META = db.PUBLICO_META.Find(id);
-            if (pUBLICO_META == null)
+            VENDEDOR vENDEDOR = db.VENDEDOR.Find(id);
+            if (vENDEDOR == null)
             {
                 return NotFound();
             }
 
-            return Ok(pUBLICO_META);
+            return Ok(vENDEDOR);
         }
 
-        // PUT: api/PUBLICO_META/5
+        // PUT: api/VENDEDOR/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutPUBLICO_META(string id, PUBLICO_META pUBLICO_META)
+        public IHttpActionResult PutVENDEDOR(int id, VENDEDOR vENDEDOR)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != pUBLICO_META.Nombre)
+            if (id != vENDEDOR.Cedula)
             {
                 return BadRequest();
             }
 
-            db.Entry(pUBLICO_META).State = EntityState.Modified;
+            db.Entry(vENDEDOR).State = EntityState.Modified;
 
             try
             {
@@ -64,7 +57,7 @@ namespace TECres_Web.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PUBLICO_METAExists(id))
+                if (!VENDEDORExists(id))
                 {
                     return NotFound();
                 }
@@ -77,16 +70,16 @@ namespace TECres_Web.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/PUBLICO_META
-        [ResponseType(typeof(PUBLICO_META))]
-        public IHttpActionResult PostPUBLICO_META(PUBLICO_META pUBLICO_META)
+        // POST: api/VENDEDOR
+        [ResponseType(typeof(VENDEDOR))]
+        public IHttpActionResult PostVENDEDOR(VENDEDOR vENDEDOR)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.PUBLICO_META.Add(pUBLICO_META);
+            db.VENDEDOR.Add(vENDEDOR);
 
             try
             {
@@ -94,7 +87,7 @@ namespace TECres_Web.Controllers
             }
             catch (DbUpdateException)
             {
-                if (PUBLICO_METAExists(pUBLICO_META.Nombre))
+                if (VENDEDORExists(vENDEDOR.Cedula))
                 {
                     return Conflict();
                 }
@@ -104,23 +97,23 @@ namespace TECres_Web.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = pUBLICO_META.Nombre }, pUBLICO_META);
+            return CreatedAtRoute("DefaultApi", new { id = vENDEDOR.Cedula }, vENDEDOR);
         }
 
-        // DELETE: api/PUBLICO_META/5
-        [ResponseType(typeof(PUBLICO_META))]
-        public IHttpActionResult DeletePUBLICO_META(string id)
+        // DELETE: api/VENDEDOR/5
+        [ResponseType(typeof(VENDEDOR))]
+        public IHttpActionResult DeleteVENDEDOR(int id)
         {
-            PUBLICO_META pUBLICO_META = db.PUBLICO_META.Find(id);
-            if (pUBLICO_META == null)
+            VENDEDOR vENDEDOR = db.VENDEDOR.Find(id);
+            if (vENDEDOR == null)
             {
                 return NotFound();
             }
 
-            db.PUBLICO_META.Remove(pUBLICO_META);
+            db.VENDEDOR.Remove(vENDEDOR);
             db.SaveChanges();
 
-            return Ok(pUBLICO_META);
+            return Ok(vENDEDOR);
         }
 
         protected override void Dispose(bool disposing)
@@ -132,9 +125,9 @@ namespace TECres_Web.Controllers
             base.Dispose(disposing);
         }
 
-        private bool PUBLICO_METAExists(string id)
+        private bool VENDEDORExists(int id)
         {
-            return db.PUBLICO_META.Count(e => e.Nombre == id) > 0;
+            return db.VENDEDOR.Count(e => e.Cedula == id) > 0;
         }
     }
 }

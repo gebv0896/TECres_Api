@@ -13,9 +13,8 @@ using DB_TECres;
 
 namespace TECres_Web.Controllers
 {
-    public class OCUPACIONController : ApiController
+    public class UBICACIONController : ApiController
     {
-
         private TECresEntities db = new TECresEntities();
 
         public IHttpActionResult Options()
@@ -24,40 +23,40 @@ namespace TECres_Web.Controllers
             return Ok();
         }
 
-        // GET: api/OCUPACION
-        public IQueryable<OCUPACION> GetOCUPACION()
+        // GET: api/UBICACION
+        public IQueryable<UBICACION> GetUBICACION()
         {
-            return db.OCUPACION;
+            return db.UBICACION;
         }
 
-        // GET: api/OCUPACION/5
-        [ResponseType(typeof(OCUPACION))]
-        public IHttpActionResult GetOCUPACION(string id)
+        // GET: api/UBICACION/5
+        [ResponseType(typeof(UBICACION))]
+        public IHttpActionResult GetUBICACION(int id)
         {
-            OCUPACION oCUPACION = db.OCUPACION.Find(id);
-            if (oCUPACION == null)
+            UBICACION uBICACION = db.UBICACION.Find(id);
+            if (uBICACION == null)
             {
                 return NotFound();
             }
 
-            return Ok(oCUPACION);
+            return Ok(uBICACION);
         }
 
-        // PUT: api/OCUPACION/5
+        // PUT: api/UBICACION/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutOCUPACION(string id, OCUPACION oCUPACION)
+        public IHttpActionResult PutUBICACION(int id, UBICACION uBICACION)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != oCUPACION.Nombre)
+            if (id != uBICACION.ID)
             {
                 return BadRequest();
             }
 
-            db.Entry(oCUPACION).State = EntityState.Modified;
+            db.Entry(uBICACION).State = EntityState.Modified;
 
             try
             {
@@ -65,7 +64,7 @@ namespace TECres_Web.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!OCUPACIONExists(id))
+                if (!UBICACIONExists(id))
                 {
                     return NotFound();
                 }
@@ -78,50 +77,35 @@ namespace TECres_Web.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/OCUPACION
-        [ResponseType(typeof(OCUPACION))]
-        public IHttpActionResult PostOCUPACION(OCUPACION oCUPACION)
+        // POST: api/UBICACION
+        [ResponseType(typeof(UBICACION))]
+        public IHttpActionResult PostUBICACION(UBICACION uBICACION)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.OCUPACION.Add(oCUPACION);
+            db.UBICACION.Add(uBICACION);
+            db.SaveChanges();
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (OCUPACIONExists(oCUPACION.Nombre))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtRoute("DefaultApi", new { id = oCUPACION.Nombre }, oCUPACION);
+            return CreatedAtRoute("DefaultApi", new { id = uBICACION.ID }, uBICACION);
         }
 
-        // DELETE: api/OCUPACION/5
-        [ResponseType(typeof(OCUPACION))]
-        public IHttpActionResult DeleteOCUPACION(string id)
+        // DELETE: api/UBICACION/5
+        [ResponseType(typeof(UBICACION))]
+        public IHttpActionResult DeleteUBICACION(int id)
         {
-            OCUPACION oCUPACION = db.OCUPACION.Find(id);
-            if (oCUPACION == null)
+            UBICACION uBICACION = db.UBICACION.Find(id);
+            if (uBICACION == null)
             {
                 return NotFound();
             }
 
-            db.OCUPACION.Remove(oCUPACION);
+            db.UBICACION.Remove(uBICACION);
             db.SaveChanges();
 
-            return Ok(oCUPACION);
+            return Ok(uBICACION);
         }
 
         protected override void Dispose(bool disposing)
@@ -133,9 +117,9 @@ namespace TECres_Web.Controllers
             base.Dispose(disposing);
         }
 
-        private bool OCUPACIONExists(string id)
+        private bool UBICACIONExists(int id)
         {
-            return db.OCUPACION.Count(e => e.Nombre == id) > 0;
+            return db.UBICACION.Count(e => e.ID == id) > 0;
         }
     }
 }

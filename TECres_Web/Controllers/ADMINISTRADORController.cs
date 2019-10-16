@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using DB_TECres;
@@ -15,6 +16,12 @@ namespace TECres_Web.Controllers
     public class ADMINISTRADORController : ApiController
     {
         private TECresEntities db = new TECresEntities();
+
+        public IHttpActionResult Options()
+        {
+            HttpContext.Current.Response.AppendHeader("Allow", "GET,DELETE,PUT,POST,OPTIONS");
+            return Ok();
+        }
 
         // GET: api/ADMINISTRADOR
         public IQueryable<ADMINISTRADOR> GetADMINISTRADOR()

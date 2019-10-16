@@ -6,57 +6,50 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using DB_TECres;
 
 namespace TECres_Web.Controllers
 {
-    public class PUBLICO_METAController : ApiController
+    public class TIPO_ANUNCIOController : ApiController
     {
         private TECresEntities db = new TECresEntities();
 
-        public IHttpActionResult Options()
+        // GET: api/TIPO_ANUNCIO
+        public IQueryable<TIPO_ANUNCIO> GetTIPO_ANUNCIO()
         {
-            HttpContext.Current.Response.AppendHeader("Allow", "GET,DELETE,PUT,POST,OPTIONS");
-            return Ok();
+            return db.TIPO_ANUNCIO;
         }
 
-        // GET: api/PUBLICO_META
-        public IQueryable<PUBLICO_META> GetPUBLICO_META()
+        // GET: api/TIPO_ANUNCIO/5
+        [ResponseType(typeof(TIPO_ANUNCIO))]
+        public IHttpActionResult GetTIPO_ANUNCIO(string id)
         {
-            return db.PUBLICO_META;
-        }
-
-        // GET: api/PUBLICO_META/5
-        [ResponseType(typeof(PUBLICO_META))]
-        public IHttpActionResult GetPUBLICO_META(string id)
-        {
-            PUBLICO_META pUBLICO_META = db.PUBLICO_META.Find(id);
-            if (pUBLICO_META == null)
+            TIPO_ANUNCIO tIPO_ANUNCIO = db.TIPO_ANUNCIO.Find(id);
+            if (tIPO_ANUNCIO == null)
             {
                 return NotFound();
             }
 
-            return Ok(pUBLICO_META);
+            return Ok(tIPO_ANUNCIO);
         }
 
-        // PUT: api/PUBLICO_META/5
+        // PUT: api/TIPO_ANUNCIO/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutPUBLICO_META(string id, PUBLICO_META pUBLICO_META)
+        public IHttpActionResult PutTIPO_ANUNCIO(string id, TIPO_ANUNCIO tIPO_ANUNCIO)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != pUBLICO_META.Nombre)
+            if (id != tIPO_ANUNCIO.Nombre)
             {
                 return BadRequest();
             }
 
-            db.Entry(pUBLICO_META).State = EntityState.Modified;
+            db.Entry(tIPO_ANUNCIO).State = EntityState.Modified;
 
             try
             {
@@ -64,7 +57,7 @@ namespace TECres_Web.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PUBLICO_METAExists(id))
+                if (!TIPO_ANUNCIOExists(id))
                 {
                     return NotFound();
                 }
@@ -77,16 +70,16 @@ namespace TECres_Web.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/PUBLICO_META
-        [ResponseType(typeof(PUBLICO_META))]
-        public IHttpActionResult PostPUBLICO_META(PUBLICO_META pUBLICO_META)
+        // POST: api/TIPO_ANUNCIO
+        [ResponseType(typeof(TIPO_ANUNCIO))]
+        public IHttpActionResult PostTIPO_ANUNCIO(TIPO_ANUNCIO tIPO_ANUNCIO)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.PUBLICO_META.Add(pUBLICO_META);
+            db.TIPO_ANUNCIO.Add(tIPO_ANUNCIO);
 
             try
             {
@@ -94,7 +87,7 @@ namespace TECres_Web.Controllers
             }
             catch (DbUpdateException)
             {
-                if (PUBLICO_METAExists(pUBLICO_META.Nombre))
+                if (TIPO_ANUNCIOExists(tIPO_ANUNCIO.Nombre))
                 {
                     return Conflict();
                 }
@@ -104,23 +97,23 @@ namespace TECres_Web.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = pUBLICO_META.Nombre }, pUBLICO_META);
+            return CreatedAtRoute("DefaultApi", new { id = tIPO_ANUNCIO.Nombre }, tIPO_ANUNCIO);
         }
 
-        // DELETE: api/PUBLICO_META/5
-        [ResponseType(typeof(PUBLICO_META))]
-        public IHttpActionResult DeletePUBLICO_META(string id)
+        // DELETE: api/TIPO_ANUNCIO/5
+        [ResponseType(typeof(TIPO_ANUNCIO))]
+        public IHttpActionResult DeleteTIPO_ANUNCIO(string id)
         {
-            PUBLICO_META pUBLICO_META = db.PUBLICO_META.Find(id);
-            if (pUBLICO_META == null)
+            TIPO_ANUNCIO tIPO_ANUNCIO = db.TIPO_ANUNCIO.Find(id);
+            if (tIPO_ANUNCIO == null)
             {
                 return NotFound();
             }
 
-            db.PUBLICO_META.Remove(pUBLICO_META);
+            db.TIPO_ANUNCIO.Remove(tIPO_ANUNCIO);
             db.SaveChanges();
 
-            return Ok(pUBLICO_META);
+            return Ok(tIPO_ANUNCIO);
         }
 
         protected override void Dispose(bool disposing)
@@ -132,9 +125,9 @@ namespace TECres_Web.Controllers
             base.Dispose(disposing);
         }
 
-        private bool PUBLICO_METAExists(string id)
+        private bool TIPO_ANUNCIOExists(string id)
         {
-            return db.PUBLICO_META.Count(e => e.Nombre == id) > 0;
+            return db.TIPO_ANUNCIO.Count(e => e.Nombre == id) > 0;
         }
     }
 }

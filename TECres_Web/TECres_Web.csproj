@@ -163,10 +163,24 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ADMINISTRADORController.cs" />
+    <Compile Include="Controllers\ANUNCIOController.cs" />
+    <Compile Include="Controllers\CLIENTEController.cs" />
+    <Compile Include="Controllers\COMPRADORController.cs" />
+    <Compile Include="Controllers\FACTURAController.cs" />
+    <Compile Include="Controllers\FOTOController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MENSAJEController.cs" />
     <Compile Include="Controllers\OCUPACIONController.cs" />
+    <Compile Include="Controllers\PERFIL_DE_CLIENTEController.cs" />
+    <Compile Include="Controllers\PROPIEDADController.cs" />
     <Compile Include="Controllers\PUBLICO_METAController.cs" />
+    <Compile Include="Controllers\TIENE_OCUPACIONController.cs" />
+    <Compile Include="Controllers\TIENE_PISOController.cs" />
+    <Compile Include="Controllers\TIPO_ANUNCIOController.cs" />
+    <Compile Include="Controllers\TIPO_PISOController.cs" />
+    <Compile Include="Controllers\UBICACIONController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\VENDEDORController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
