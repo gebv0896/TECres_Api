@@ -561,5 +561,6 @@
       <End Role="TIPO_PISO" EntitySet="TIPO_PISO" />
       <End Role="TIENE_PISO" EntitySet="TIENE_PISO" />
     </AssociationSet>
+    <FunctionImport Name="spPrueba" ReturnType="Collection(String)" />
   </EntityContainer>
 </Schema>

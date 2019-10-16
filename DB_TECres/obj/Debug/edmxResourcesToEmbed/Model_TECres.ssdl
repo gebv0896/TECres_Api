@@ -428,6 +428,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="spPrueba" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="TECresModelStoreContainer">
     <EntitySet Name="ADMINISTRADOR" EntityType="Self.ADMINISTRADOR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ANUNCIO" EntityType="Self.ANUNCIO" Schema="dbo" store:Type="Tables" />

@@ -173,6 +173,7 @@
     <Compile Include="Controllers\OCUPACIONController.cs" />
     <Compile Include="Controllers\PERFIL_DE_CLIENTEController.cs" />
     <Compile Include="Controllers\PROPIEDADController.cs" />
+    <Compile Include="Controllers\pruebaController.cs" />
     <Compile Include="Controllers\PUBLICO_METAController.cs" />
     <Compile Include="Controllers\TIENE_OCUPACIONController.cs" />
     <Compile Include="Controllers\TIENE_PISOController.cs" />
@@ -180,11 +181,11 @@
     <Compile Include="Controllers\TIPO_INMUEBLEController.cs" />
     <Compile Include="Controllers\TIPO_PISOController.cs" />
     <Compile Include="Controllers\UBICACIONController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\VENDEDORController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\spPruebaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -241,7 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

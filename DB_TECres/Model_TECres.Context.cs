@@ -12,6 +12,8 @@ namespace DB_TECres
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class TECresEntities : DbContext
     {
@@ -43,5 +45,10 @@ namespace DB_TECres
         public virtual DbSet<TIPO_PISO> TIPO_PISO { get; set; }
         public virtual DbSet<UBICACION> UBICACION { get; set; }
         public virtual DbSet<VENDEDOR> VENDEDOR { get; set; }
+    
+        public virtual ObjectResult<string> spPrueba()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("spPrueba");
+        }
     }
 }
