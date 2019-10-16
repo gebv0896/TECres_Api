@@ -177,6 +177,7 @@
     <Compile Include="Controllers\TIENE_OCUPACIONController.cs" />
     <Compile Include="Controllers\TIENE_PISOController.cs" />
     <Compile Include="Controllers\TIPO_ANUNCIOController.cs" />
+    <Compile Include="Controllers\TIPO_INMUEBLEController.cs" />
     <Compile Include="Controllers\TIPO_PISOController.cs" />
     <Compile Include="Controllers\UBICACIONController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
