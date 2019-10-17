@@ -28,8 +28,8 @@ namespace DB_TECres
         public System.DateTime Fecha_Ingreso { get; set; }
         public int Cedula_Admin { get; set; }
     
-        public virtual ADMINISTRADOR ADMINISTRADOR { get; set; }
+        public ADMINISTRADOR ADMINISTRADOR { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ANUNCIO> ANUNCIO { get; set; }
+        public ICollection<ANUNCIO> ANUNCIO { get; set; }
     }
 }

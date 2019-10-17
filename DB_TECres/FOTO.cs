@@ -18,6 +18,6 @@ namespace DB_TECres
         public string Dir_URL { get; set; }
         public int ID_Propiedad { get; set; }
     
-        public virtual PROPIEDAD PROPIEDAD { get; set; }
+        public PROPIEDAD PROPIEDAD { get; set; }
     }
 }

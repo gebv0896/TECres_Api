@@ -24,6 +24,6 @@ namespace DB_TECres
         public string Nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TIENE_OCUPACION> TIENE_OCUPACION { get; set; }
+        public ICollection<TIENE_OCUPACION> TIENE_OCUPACION { get; set; }
     }
 }

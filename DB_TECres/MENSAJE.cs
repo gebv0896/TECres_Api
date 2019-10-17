@@ -19,7 +19,7 @@ namespace DB_TECres
         public int ID_Comprador { get; set; }
         public int Cedula_Cliente { get; set; }
     
-        public virtual CLIENTE CLIENTE { get; set; }
-        public virtual COMPRADOR COMPRADOR { get; set; }
+        public CLIENTE CLIENTE { get; set; }
+        public COMPRADOR COMPRADOR { get; set; }
     }
 }

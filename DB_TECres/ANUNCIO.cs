@@ -29,10 +29,10 @@ namespace DB_TECres
         public int ID_Publico_Meta { get; set; }
         public Nullable<int> Cedula_Admin { get; set; }
     
-        public virtual ADMINISTRADOR ADMINISTRADOR { get; set; }
-        public virtual VENDEDOR VENDEDOR { get; set; }
-        public virtual FACTURA FACTURA { get; set; }
-        public virtual PROPIEDAD PROPIEDAD { get; set; }
-        public virtual TIPO_ANUNCIO TIPO_ANUNCIO1 { get; set; }
+        public ADMINISTRADOR ADMINISTRADOR { get; set; }
+        public VENDEDOR VENDEDOR { get; set; }
+        public FACTURA FACTURA { get; set; }
+        public PROPIEDAD PROPIEDAD { get; set; }
+        public TIPO_ANUNCIO TIPO_ANUNCIO1 { get; set; }
     }
 }

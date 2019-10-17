@@ -32,10 +32,10 @@ namespace DB_TECres
         public string Contrasena { get; set; }
         public string Perfil_Cliente { get; set; }
     
-        public virtual PERFIL_DE_CLIENTE PERFIL_DE_CLIENTE { get; set; }
+        public PERFIL_DE_CLIENTE PERFIL_DE_CLIENTE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MENSAJE> MENSAJE { get; set; }
+        public ICollection<MENSAJE> MENSAJE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PROPIEDAD> PROPIEDAD { get; set; }
+        public ICollection<PROPIEDAD> PROPIEDAD { get; set; }
     }
 }

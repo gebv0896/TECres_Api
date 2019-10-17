@@ -42,13 +42,13 @@ namespace DB_TECres
         public int Cedula_Cliente { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ANUNCIO> ANUNCIO { get; set; }
-        public virtual CLIENTE CLIENTE { get; set; }
+        public ICollection<ANUNCIO> ANUNCIO { get; set; }
+        public CLIENTE CLIENTE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FOTO> FOTO { get; set; }
-        public virtual UBICACION UBICACION { get; set; }
-        public virtual TIPO_INMUEBLE TIPO_INMUEBLE { get; set; }
+        public ICollection<FOTO> FOTO { get; set; }
+        public UBICACION UBICACION { get; set; }
+        public TIPO_INMUEBLE TIPO_INMUEBLE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TIENE_PISO> TIENE_PISO { get; set; }
+        public  ICollection<TIENE_PISO> TIENE_PISO { get; set; }
     }
 }

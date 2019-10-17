@@ -25,6 +25,7 @@ namespace DB_TECres
         public string Descripcion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CLIENTE> CLIENTE { get; set; }
+        public ICollection<CLIENTE> CLIENTE { get; set; }
     }
 }
+u

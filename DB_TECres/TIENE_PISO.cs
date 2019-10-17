@@ -18,7 +18,7 @@ namespace DB_TECres
         public int ID_Propiedad { get; set; }
         public string Tipo_Piso { get; set; }
     
-        public virtual PROPIEDAD PROPIEDAD { get; set; }
-        public virtual TIPO_PISO TIPO_PISO1 { get; set; }
+        public PROPIEDAD PROPIEDAD { get; set; }
+        public TIPO_PISO TIPO_PISO1 { get; set; }
     }
 }

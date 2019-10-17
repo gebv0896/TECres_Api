@@ -25,6 +25,6 @@ namespace DB_TECres
         public System.DateTime Fecha { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ANUNCIO> ANUNCIO { get; set; }
+        public ICollection<ANUNCIO> ANUNCIO { get; set; }
     }
 }

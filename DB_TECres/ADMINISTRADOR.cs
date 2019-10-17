@@ -32,8 +32,8 @@ namespace DB_TECres
         public string Contrasena { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ANUNCIO> ANUNCIO { get; set; }
+        public ICollection<ANUNCIO> ANUNCIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VENDEDOR> VENDEDOR { get; set; }
+        public ICollection<VENDEDOR> VENDEDOR { get; set; }
     }
 }

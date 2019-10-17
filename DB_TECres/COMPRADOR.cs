@@ -32,10 +32,10 @@ namespace DB_TECres
         public string Contrasena { get; set; }
         public int ID_Ubicacion { get; set; }
     
-        public virtual UBICACION UBICACION { get; set; }
+        public UBICACION UBICACION { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MENSAJE> MENSAJE { get; set; }
+        public ICollection<MENSAJE> MENSAJE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TIENE_OCUPACION> TIENE_OCUPACION { get; set; }
+        public ICollection<TIENE_OCUPACION> TIENE_OCUPACION { get; set; }
     }
 }

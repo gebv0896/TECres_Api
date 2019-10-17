@@ -22,6 +22,6 @@ namespace DB_TECres
         public int Edad_Max { get; set; }
         public int ID_Ubicacion { get; set; }
     
-        public virtual UBICACION UBICACION { get; set; }
+        public UBICACION UBICACION { get; set; }
     }
 }

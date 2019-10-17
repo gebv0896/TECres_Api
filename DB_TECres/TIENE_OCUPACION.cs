@@ -18,7 +18,7 @@ namespace DB_TECres
         public int ID_Comprador { get; set; }
         public string Ocupacion { get; set; }
     
-        public virtual COMPRADOR COMPRADOR { get; set; }
-        public virtual OCUPACION OCUPACION1 { get; set; }
+        public COMPRADOR COMPRADOR { get; set; }
+        public OCUPACION OCUPACION1 { get; set; }
     }
 }
