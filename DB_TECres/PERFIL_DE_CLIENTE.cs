@@ -28,4 +28,3 @@ namespace DB_TECres
         public ICollection<CLIENTE> CLIENTE { get; set; }
     }
 }
-u

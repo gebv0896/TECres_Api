@@ -44,7 +44,7 @@ namespace TECres_Web.Controllers
 
         // PUT: api/ADMINISTRADOR/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutADMINISTRADOR(int id, ADMINISTRADOR aDMINISTRADOR)
+        public IHttpActionResult PutADMINISTRADOR(int id,ADMINISTRADOR aDMINISTRADOR)
         {
             if (!ModelState.IsValid)
             {
