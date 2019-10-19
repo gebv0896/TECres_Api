@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TECres_Web.BundleConfig" Collapsed="true">
+    <Position X="6.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.FilterConfig" Collapsed="true">
+    <Position X="8.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\FilterConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.RouteConfig" Collapsed="true">
+    <Position X="10.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.WebApiConfig" Collapsed="true">
+    <Position X="6.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\WebApiConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.WebApiApplication" Collapsed="true">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ApiDescriptionExtensions" Collapsed="true">
+    <Position X="10" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ApiDescriptionExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.HelpPageConfig" Collapsed="true">
+    <Position X="18.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\App_Start\HelpPageConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.HelpPageAreaRegistration" Collapsed="true">
+    <Position X="16.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\HelpPageAreaRegistration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.HelpPageConfigurationExtensions" Collapsed="true">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAABAICACACEAACGSCAAAADABAAAEMAAAAAIEA=</HashCode>
+      <FileName>Areas\HelpPage\HelpPageConfigurationExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.HelpPageSampleGenerator" Collapsed="true">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAYAARQAQAAEAJgAAAQAAgAAEAgFAAAAABCAAAI=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.HelpPageSampleKey" Collapsed="true">
+    <Position X="4.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAgAgAAAAAAAAAAAAICQAAAEAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ImageSample" Collapsed="true">
+    <Position X="6.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAIAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\ImageSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.InvalidSample" Collapsed="true">
+    <Position X="10.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\InvalidSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ObjectGenerator" Collapsed="true">
+    <Position X="8.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABDAoAAAAAACAEAICAAAYAAACAAAAAAgCAgAAAAIA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\ObjectGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.TextSample" Collapsed="true">
+    <Position X="16.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAACAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\TextSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.XmlDocumentationProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIEAAAAIBAEAQAAABIAAAAAAAAAAAAAAAAAAAAAAAkg=</HashCode>
+      <FileName>Areas\HelpPage\XmlDocumentationProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.Controllers.HelpController" Collapsed="true">
+    <Position X="14.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAABAAAAAAAAAAAAAAAAAAAAAAAgAEAAAAgAAA=</HashCode>
+      <FileName>Areas\HelpPage\Controllers\HelpController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.CollectionModelDescription" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.DictionaryModelDescription" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.EnumValueDescription" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.ModelDescription" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ModelDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator" Collapsed="true">
+    <Position X="4.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGQBAAJAABAAACBAgAAAAASBAAAAAAAAAEAACAQAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.ModelNameAttribute" Collapsed="true">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.ModelNameHelper" Collapsed="true">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.ParameterAnnotation" Collapsed="true">
+    <Position X="10.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.ParameterDescription" Collapsed="true">
+    <Position X="14.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAQAQAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ParameterDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.ModelDescriptions.SimpleTypeModelDescription" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Areas.HelpPage.Models.HelpPageApiModel" Collapsed="true">
+    <Position X="8.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAGBAAAAAAAAAAAAAgAAAAAAAUBAAAAAQAQAg=</HashCode>
+      <FileName>Areas\HelpPage\Models\HelpPageApiModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.ADMINISTRADORController">
+    <Position X="14.25" Y="15.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQABAAEEAAAAAAAEAAAAIAAAAAAABAAAA=</HashCode>
+      <FileName>Controllers\ADMINISTRADORController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.ANUNCIOController">
+    <Position X="7.5" Y="15.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQCAAAAAAAIEAAAIAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ANUNCIOController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.CLIENTEController">
+    <Position X="7.5" Y="12" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAQAAAAAAgCAAAAAAAAAAAAAAABAAAAgAA=</HashCode>
+      <FileName>Controllers\CLIENTEController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.COMPRADORController">
+    <Position X="10.75" Y="12" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQgAAAAAAAAAAAIAAAAAIAAAAAAAAAEQA=</HashCode>
+      <FileName>Controllers\COMPRADORController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.FACTURAController">
+    <Position X="10.5" Y="15.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAQAAAAAACAAAAACAAAgAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Controllers\FACTURAController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.FOTOController">
+    <Position X="1.25" Y="12" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EABAAAAAACAQAAAAAAAAAAAAAAAEAAAAABIAAAAAAAA=</HashCode>
+      <FileName>Controllers\FOTOController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.HomeController" Collapsed="true">
+    <Position X="4.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.MENSAJEController">
+    <Position X="14.25" Y="12" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACQQIAIAAAAAAABAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Controllers\MENSAJEController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.OCUPACIONController">
+    <Position X="11.75" Y="18.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAwABAAAAAAAAAAAAAAAAICAAAAAABAIAA=</HashCode>
+      <FileName>Controllers\OCUPACIONController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.PERFIL_DE_CLIENTEController">
+    <Position X="1.25" Y="18.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAAAAIABAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\PERFIL_DE_CLIENTEController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.PROPIEDADController">
+    <Position X="4.5" Y="15.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACEQCAAgAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\PROPIEDADController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.pruebaController" Collapsed="true">
+    <Position X="6.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\pruebaController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.PUBLICO_METAController">
+    <Position X="8.5" Y="18.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACEQAAACAAAABAAAAAAAAAAIAAAAAABAAAA=</HashCode>
+      <FileName>Controllers\PUBLICO_METAController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.TIENE_OCUPACIONController">
+    <Position X="4" Y="12" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACAQAACAAAAAAAAAAAAAAAAAAEAAAACAAAI=</HashCode>
+      <FileName>Controllers\TIENE_OCUPACIONController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.TIENE_PISOController">
+    <Position X="1.25" Y="15.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAQAAAAAAAAAAAAQAAAAAAAAAAIAwAAAAA=</HashCode>
+      <FileName>Controllers\TIENE_PISOController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.TIPO_ANUNCIOController">
+    <Position X="5" Y="18.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACAYAAAAAAAAAAAQAAAgAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Controllers\TIPO_ANUNCIOController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.TIPO_INMUEBLEController">
+    <Position X="17.25" Y="15.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQAAAAAAAAAAAAAAAAEAQAECAAAAAAABA=</HashCode>
+      <FileName>Controllers\TIPO_INMUEBLEController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.TIPO_PISOController">
+    <Position X="17.5" Y="18.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAQAAAAAAAAAAAAAAAAAAAACAABBAAAIAA=</HashCode>
+      <FileName>Controllers\TIPO_PISOController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.UBICACIONController">
+    <Position X="14.75" Y="18.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACiQAAAAAAAEAAAAAAAAAAAAAABAAABAAAA=</HashCode>
+      <FileName>Controllers\UBICACIONController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Controllers.VENDEDORController">
+    <Position X="17.25" Y="12" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQAAAAAAAEAAAIgAAAAAACBAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\VENDEDORController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TECres_Web.Models.spPruebaModel" Collapsed="true">
+    <Position X="10.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\spPruebaModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TECres_Web.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider" Collapsed="true">
+    <Position X="6.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TECres_Web.Areas.HelpPage.SampleDirection" Collapsed="true">
+    <Position X="4.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\SampleDirection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

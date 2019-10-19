@@ -49,6 +49,6 @@ namespace DB_TECres
         public UBICACION UBICACION { get; set; }
         public TIPO_INMUEBLE TIPO_INMUEBLE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public  ICollection<TIENE_PISO> TIENE_PISO { get; set; }
+        public ICollection<TIENE_PISO> TIENE_PISO { get; set; }
     }
 }

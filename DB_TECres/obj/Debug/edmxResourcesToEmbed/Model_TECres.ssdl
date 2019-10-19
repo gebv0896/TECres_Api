@@ -428,6 +428,112 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="AnuncioEstadistica" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Anu" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AnunciosCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CedulaCliente" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AnuncioSinEstadisticas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Anu" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AnunciosPropiedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Prop" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CantonesPorProvincia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Provin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="CompradorDatos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Comprador" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DistritosPorCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Provin" Type="varchar" Mode="In" />
+    <Parameter Name="Cant" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="MensajesCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CedulaCliente" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PropiedadCompleta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Prop" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PropiedadesBusqueda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cant_Hab" Type="int" Mode="In" />
+    <Parameter Name="PrecMin" Type="int" Mode="In" />
+    <Parameter Name="PrecMax" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PropiedadesCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedula" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Provincias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ReportesFacturas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaIni" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="ReportesVencidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaHoy" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Insertar_Comprador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pNombre" Type="varchar" Mode="In" />
+    <Parameter Name="pApellido1" Type="varchar" Mode="In" />
+    <Parameter Name="pApellido2" Type="varchar" Mode="In" />
+    <Parameter Name="pGenero" Type="varchar" Mode="In" />
+    <Parameter Name="pFecha_Nacimiento" Type="datetime" Mode="In" />
+    <Parameter Name="pIngresos_Mes" Type="int" Mode="In" />
+    <Parameter Name="pUsuario" Type="varchar" Mode="In" />
+    <Parameter Name="pContrasena" Type="varchar" Mode="In" />
+    <Parameter Name="pID_Ubicacion" Type="int" Mode="In" />
+    <Parameter Name="pOcupacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_Insertar_Propiedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pPrecio" Type="int" Mode="In" />
+    <Parameter Name="pDireccion_Exacta" Type="varchar" Mode="In" />
+    <Parameter Name="pTitulo" Type="varchar" Mode="In" />
+    <Parameter Name="pParqueo_Visitas" Type="bit" Mode="In" />
+    <Parameter Name="pNiveles" Type="int" Mode="In" />
+    <Parameter Name="pPiscina" Type="bit" Mode="In" />
+    <Parameter Name="pGimnasio" Type="bit" Mode="In" />
+    <Parameter Name="pTamano_Terreno" Type="int" Mode="In" />
+    <Parameter Name="pTamano_Construccion" Type="int" Mode="In" />
+    <Parameter Name="pCant_Habitaciones" Type="int" Mode="In" />
+    <Parameter Name="pCant_Banos" Type="int" Mode="In" />
+    <Parameter Name="pCant_Parqueos" Type="int" Mode="In" />
+    <Parameter Name="pDescripcion" Type="varchar" Mode="In" />
+    <Parameter Name="pFoto_Principal" Type="varchar" Mode="In" />
+    <Parameter Name="pID_Ubicacion" Type="int" Mode="In" />
+    <Parameter Name="pNombre_Inmueble" Type="varchar" Mode="In" />
+    <Parameter Name="pCedula_Cliente" Type="int" Mode="In" />
+    <Parameter Name="pNombrePiso" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="spPrueba" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="TECresModelStoreContainer">
     <EntitySet Name="ADMINISTRADOR" EntityType="Self.ADMINISTRADOR" Schema="dbo" store:Type="Tables" />

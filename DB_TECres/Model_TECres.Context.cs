@@ -50,5 +50,368 @@ namespace DB_TECres
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("spPrueba");
         }
+    
+        public virtual ObjectResult<AnuncioEstadistica_Result> AnuncioEstadistica(Nullable<int> iD_Anu)
+        {
+            var iD_AnuParameter = iD_Anu.HasValue ?
+                new ObjectParameter("ID_Anu", iD_Anu) :
+                new ObjectParameter("ID_Anu", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<AnuncioEstadistica_Result>("AnuncioEstadistica", iD_AnuParameter);
+        }
+    
+        public virtual ObjectResult<AnunciosCliente_Result> AnunciosCliente(Nullable<int> cedulaCliente)
+        {
+            var cedulaClienteParameter = cedulaCliente.HasValue ?
+                new ObjectParameter("CedulaCliente", cedulaCliente) :
+                new ObjectParameter("CedulaCliente", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<AnunciosCliente_Result>("AnunciosCliente", cedulaClienteParameter);
+        }
+    
+        public virtual ObjectResult<AnuncioSinEstadisticas_Result> AnuncioSinEstadisticas(Nullable<int> iD_Anu)
+        {
+            var iD_AnuParameter = iD_Anu.HasValue ?
+                new ObjectParameter("ID_Anu", iD_Anu) :
+                new ObjectParameter("ID_Anu", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<AnuncioSinEstadisticas_Result>("AnuncioSinEstadisticas", iD_AnuParameter);
+        }
+    
+        public virtual ObjectResult<AnunciosPropiedad_Result> AnunciosPropiedad(Nullable<int> iD_Prop)
+        {
+            var iD_PropParameter = iD_Prop.HasValue ?
+                new ObjectParameter("ID_Prop", iD_Prop) :
+                new ObjectParameter("ID_Prop", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<AnunciosPropiedad_Result>("AnunciosPropiedad", iD_PropParameter);
+        }
+    
+        public virtual ObjectResult<string> CantonesPorProvincia(string provin)
+        {
+            var provinParameter = provin != null ?
+                new ObjectParameter("Provin", provin) :
+                new ObjectParameter("Provin", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("CantonesPorProvincia", provinParameter);
+        }
+    
+        public virtual ObjectResult<CompradorDatos_Result> CompradorDatos(Nullable<int> iD_Comprador)
+        {
+            var iD_CompradorParameter = iD_Comprador.HasValue ?
+                new ObjectParameter("ID_Comprador", iD_Comprador) :
+                new ObjectParameter("ID_Comprador", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CompradorDatos_Result>("CompradorDatos", iD_CompradorParameter);
+        }
+    
+        public virtual ObjectResult<string> DistritosPorCanton(string provin, string cant)
+        {
+            var provinParameter = provin != null ?
+                new ObjectParameter("Provin", provin) :
+                new ObjectParameter("Provin", typeof(string));
+    
+            var cantParameter = cant != null ?
+                new ObjectParameter("Cant", cant) :
+                new ObjectParameter("Cant", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("DistritosPorCanton", provinParameter, cantParameter);
+        }
+    
+        public virtual ObjectResult<MensajesCliente_Result> MensajesCliente(Nullable<int> cedulaCliente)
+        {
+            var cedulaClienteParameter = cedulaCliente.HasValue ?
+                new ObjectParameter("CedulaCliente", cedulaCliente) :
+                new ObjectParameter("CedulaCliente", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<MensajesCliente_Result>("MensajesCliente", cedulaClienteParameter);
+        }
+    
+        public virtual ObjectResult<PropiedadCompleta_Result> PropiedadCompleta(Nullable<int> iD_Prop)
+        {
+            var iD_PropParameter = iD_Prop.HasValue ?
+                new ObjectParameter("ID_Prop", iD_Prop) :
+                new ObjectParameter("ID_Prop", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PropiedadCompleta_Result>("PropiedadCompleta", iD_PropParameter);
+        }
+    
+        public virtual ObjectResult<PropiedadesBusqueda_Result> PropiedadesBusqueda(Nullable<int> cant_Hab, Nullable<int> precMin, Nullable<int> precMax)
+        {
+            var cant_HabParameter = cant_Hab.HasValue ?
+                new ObjectParameter("Cant_Hab", cant_Hab) :
+                new ObjectParameter("Cant_Hab", typeof(int));
+    
+            var precMinParameter = precMin.HasValue ?
+                new ObjectParameter("PrecMin", precMin) :
+                new ObjectParameter("PrecMin", typeof(int));
+    
+            var precMaxParameter = precMax.HasValue ?
+                new ObjectParameter("PrecMax", precMax) :
+                new ObjectParameter("PrecMax", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PropiedadesBusqueda_Result>("PropiedadesBusqueda", cant_HabParameter, precMinParameter, precMaxParameter);
+        }
+    
+        public virtual ObjectResult<PropiedadesCliente_Result> PropiedadesCliente(Nullable<int> cedula)
+        {
+            var cedulaParameter = cedula.HasValue ?
+                new ObjectParameter("Cedula", cedula) :
+                new ObjectParameter("Cedula", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PropiedadesCliente_Result>("PropiedadesCliente", cedulaParameter);
+        }
+    
+        public virtual ObjectResult<string> Provincias()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("Provincias");
+        }
+    
+        public virtual ObjectResult<ReportesFacturas_Result> ReportesFacturas(Nullable<System.DateTime> fechaIni, Nullable<System.DateTime> fechaFin)
+        {
+            var fechaIniParameter = fechaIni.HasValue ?
+                new ObjectParameter("FechaIni", fechaIni) :
+                new ObjectParameter("FechaIni", typeof(System.DateTime));
+    
+            var fechaFinParameter = fechaFin.HasValue ?
+                new ObjectParameter("FechaFin", fechaFin) :
+                new ObjectParameter("FechaFin", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ReportesFacturas_Result>("ReportesFacturas", fechaIniParameter, fechaFinParameter);
+        }
+    
+        public virtual ObjectResult<ReportesVencidos_Result> ReportesVencidos(Nullable<System.DateTime> fechaHoy)
+        {
+            var fechaHoyParameter = fechaHoy.HasValue ?
+                new ObjectParameter("FechaHoy", fechaHoy) :
+                new ObjectParameter("FechaHoy", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ReportesVencidos_Result>("ReportesVencidos", fechaHoyParameter);
+        }
+    
+        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<SP_Insertar_Comprador_Result> SP_Insertar_Comprador(string pNombre, string pApellido1, string pApellido2, string pGenero, Nullable<System.DateTime> pFecha_Nacimiento, Nullable<int> pIngresos_Mes, string pUsuario, string pContrasena, Nullable<int> pID_Ubicacion, string pOcupacion)
+        {
+            var pNombreParameter = pNombre != null ?
+                new ObjectParameter("pNombre", pNombre) :
+                new ObjectParameter("pNombre", typeof(string));
+    
+            var pApellido1Parameter = pApellido1 != null ?
+                new ObjectParameter("pApellido1", pApellido1) :
+                new ObjectParameter("pApellido1", typeof(string));
+    
+            var pApellido2Parameter = pApellido2 != null ?
+                new ObjectParameter("pApellido2", pApellido2) :
+                new ObjectParameter("pApellido2", typeof(string));
+    
+            var pGeneroParameter = pGenero != null ?
+                new ObjectParameter("pGenero", pGenero) :
+                new ObjectParameter("pGenero", typeof(string));
+    
+            var pFecha_NacimientoParameter = pFecha_Nacimiento.HasValue ?
+                new ObjectParameter("pFecha_Nacimiento", pFecha_Nacimiento) :
+                new ObjectParameter("pFecha_Nacimiento", typeof(System.DateTime));
+    
+            var pIngresos_MesParameter = pIngresos_Mes.HasValue ?
+                new ObjectParameter("pIngresos_Mes", pIngresos_Mes) :
+                new ObjectParameter("pIngresos_Mes", typeof(int));
+    
+            var pUsuarioParameter = pUsuario != null ?
+                new ObjectParameter("pUsuario", pUsuario) :
+                new ObjectParameter("pUsuario", typeof(string));
+    
+            var pContrasenaParameter = pContrasena != null ?
+                new ObjectParameter("pContrasena", pContrasena) :
+                new ObjectParameter("pContrasena", typeof(string));
+    
+            var pID_UbicacionParameter = pID_Ubicacion.HasValue ?
+                new ObjectParameter("pID_Ubicacion", pID_Ubicacion) :
+                new ObjectParameter("pID_Ubicacion", typeof(int));
+    
+            var pOcupacionParameter = pOcupacion != null ?
+                new ObjectParameter("pOcupacion", pOcupacion) :
+                new ObjectParameter("pOcupacion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_Insertar_Comprador_Result>("SP_Insertar_Comprador", pNombreParameter, pApellido1Parameter, pApellido2Parameter, pGeneroParameter, pFecha_NacimientoParameter, pIngresos_MesParameter, pUsuarioParameter, pContrasenaParameter, pID_UbicacionParameter, pOcupacionParameter);
+        }
+    
+        public virtual ObjectResult<SP_Insertar_Propiedad_Result> SP_Insertar_Propiedad(Nullable<int> pPrecio, string pDireccion_Exacta, string pTitulo, Nullable<bool> pParqueo_Visitas, Nullable<int> pNiveles, Nullable<bool> pPiscina, Nullable<bool> pGimnasio, Nullable<int> pTamano_Terreno, Nullable<int> pTamano_Construccion, Nullable<int> pCant_Habitaciones, Nullable<int> pCant_Banos, Nullable<int> pCant_Parqueos, string pDescripcion, string pFoto_Principal, Nullable<int> pID_Ubicacion, string pNombre_Inmueble, Nullable<int> pCedula_Cliente, string pNombrePiso)
+        {
+            var pPrecioParameter = pPrecio.HasValue ?
+                new ObjectParameter("pPrecio", pPrecio) :
+                new ObjectParameter("pPrecio", typeof(int));
+    
+            var pDireccion_ExactaParameter = pDireccion_Exacta != null ?
+                new ObjectParameter("pDireccion_Exacta", pDireccion_Exacta) :
+                new ObjectParameter("pDireccion_Exacta", typeof(string));
+    
+            var pTituloParameter = pTitulo != null ?
+                new ObjectParameter("pTitulo", pTitulo) :
+                new ObjectParameter("pTitulo", typeof(string));
+    
+            var pParqueo_VisitasParameter = pParqueo_Visitas.HasValue ?
+                new ObjectParameter("pParqueo_Visitas", pParqueo_Visitas) :
+                new ObjectParameter("pParqueo_Visitas", typeof(bool));
+    
+            var pNivelesParameter = pNiveles.HasValue ?
+                new ObjectParameter("pNiveles", pNiveles) :
+                new ObjectParameter("pNiveles", typeof(int));
+    
+            var pPiscinaParameter = pPiscina.HasValue ?
+                new ObjectParameter("pPiscina", pPiscina) :
+                new ObjectParameter("pPiscina", typeof(bool));
+    
+            var pGimnasioParameter = pGimnasio.HasValue ?
+                new ObjectParameter("pGimnasio", pGimnasio) :
+                new ObjectParameter("pGimnasio", typeof(bool));
+    
+            var pTamano_TerrenoParameter = pTamano_Terreno.HasValue ?
+                new ObjectParameter("pTamano_Terreno", pTamano_Terreno) :
+                new ObjectParameter("pTamano_Terreno", typeof(int));
+    
+            var pTamano_ConstruccionParameter = pTamano_Construccion.HasValue ?
+                new ObjectParameter("pTamano_Construccion", pTamano_Construccion) :
+                new ObjectParameter("pTamano_Construccion", typeof(int));
+    
+            var pCant_HabitacionesParameter = pCant_Habitaciones.HasValue ?
+                new ObjectParameter("pCant_Habitaciones", pCant_Habitaciones) :
+                new ObjectParameter("pCant_Habitaciones", typeof(int));
+    
+            var pCant_BanosParameter = pCant_Banos.HasValue ?
+                new ObjectParameter("pCant_Banos", pCant_Banos) :
+                new ObjectParameter("pCant_Banos", typeof(int));
+    
+            var pCant_ParqueosParameter = pCant_Parqueos.HasValue ?
+                new ObjectParameter("pCant_Parqueos", pCant_Parqueos) :
+                new ObjectParameter("pCant_Parqueos", typeof(int));
+    
+            var pDescripcionParameter = pDescripcion != null ?
+                new ObjectParameter("pDescripcion", pDescripcion) :
+                new ObjectParameter("pDescripcion", typeof(string));
+    
+            var pFoto_PrincipalParameter = pFoto_Principal != null ?
+                new ObjectParameter("pFoto_Principal", pFoto_Principal) :
+                new ObjectParameter("pFoto_Principal", typeof(string));
+    
+            var pID_UbicacionParameter = pID_Ubicacion.HasValue ?
+                new ObjectParameter("pID_Ubicacion", pID_Ubicacion) :
+                new ObjectParameter("pID_Ubicacion", typeof(int));
+    
+            var pNombre_InmuebleParameter = pNombre_Inmueble != null ?
+                new ObjectParameter("pNombre_Inmueble", pNombre_Inmueble) :
+                new ObjectParameter("pNombre_Inmueble", typeof(string));
+    
+            var pCedula_ClienteParameter = pCedula_Cliente.HasValue ?
+                new ObjectParameter("pCedula_Cliente", pCedula_Cliente) :
+                new ObjectParameter("pCedula_Cliente", typeof(int));
+    
+            var pNombrePisoParameter = pNombrePiso != null ?
+                new ObjectParameter("pNombrePiso", pNombrePiso) :
+                new ObjectParameter("pNombrePiso", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_Insertar_Propiedad_Result>("SP_Insertar_Propiedad", pPrecioParameter, pDireccion_ExactaParameter, pTituloParameter, pParqueo_VisitasParameter, pNivelesParameter, pPiscinaParameter, pGimnasioParameter, pTamano_TerrenoParameter, pTamano_ConstruccionParameter, pCant_HabitacionesParameter, pCant_BanosParameter, pCant_ParqueosParameter, pDescripcionParameter, pFoto_PrincipalParameter, pID_UbicacionParameter, pNombre_InmuebleParameter, pCedula_ClienteParameter, pNombrePisoParameter);
+        }
+    
+        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var new_diagramnameParameter = new_diagramname != null ?
+                new ObjectParameter("new_diagramname", new_diagramname) :
+                new ObjectParameter("new_diagramname", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
+        }
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
     }
 }

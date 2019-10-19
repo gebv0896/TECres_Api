@@ -562,5 +562,274 @@
       <End Role="TIENE_PISO" EntitySet="TIENE_PISO" />
     </AssociationSet>
     <FunctionImport Name="spPrueba" ReturnType="Collection(String)" />
+    <FunctionImport Name="AnuncioEstadistica" ReturnType="Collection(TECresModel.AnuncioEstadistica_Result)">
+      <Parameter Name="ID_Anu" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AnunciosCliente" ReturnType="Collection(TECresModel.AnunciosCliente_Result)">
+      <Parameter Name="CedulaCliente" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AnuncioSinEstadisticas" ReturnType="Collection(TECresModel.AnuncioSinEstadisticas_Result)">
+      <Parameter Name="ID_Anu" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AnunciosPropiedad" ReturnType="Collection(TECresModel.AnunciosPropiedad_Result)">
+      <Parameter Name="ID_Prop" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CantonesPorProvincia" ReturnType="Collection(String)">
+      <Parameter Name="Provin" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CompradorDatos" ReturnType="Collection(TECresModel.CompradorDatos_Result)">
+      <Parameter Name="ID_Comprador" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DistritosPorCanton" ReturnType="Collection(String)">
+      <Parameter Name="Provin" Mode="In" Type="String" />
+      <Parameter Name="Cant" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MensajesCliente" ReturnType="Collection(TECresModel.MensajesCliente_Result)">
+      <Parameter Name="CedulaCliente" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PropiedadCompleta" ReturnType="Collection(TECresModel.PropiedadCompleta_Result)">
+      <Parameter Name="ID_Prop" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PropiedadesBusqueda" ReturnType="Collection(TECresModel.PropiedadesBusqueda_Result)">
+      <Parameter Name="Cant_Hab" Mode="In" Type="Int32" />
+      <Parameter Name="PrecMin" Mode="In" Type="Int32" />
+      <Parameter Name="PrecMax" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PropiedadesCliente" ReturnType="Collection(TECresModel.PropiedadesCliente_Result)">
+      <Parameter Name="Cedula" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Provincias" ReturnType="Collection(String)" />
+    <FunctionImport Name="ReportesFacturas" ReturnType="Collection(TECresModel.ReportesFacturas_Result)">
+      <Parameter Name="FechaIni" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ReportesVencidos" ReturnType="Collection(TECresModel.ReportesVencidos_Result)">
+      <Parameter Name="FechaHoy" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TECresModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TECresModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Insertar_Comprador" ReturnType="Collection(TECresModel.SP_Insertar_Comprador_Result)">
+      <Parameter Name="pNombre" Mode="In" Type="String" />
+      <Parameter Name="pApellido1" Mode="In" Type="String" />
+      <Parameter Name="pApellido2" Mode="In" Type="String" />
+      <Parameter Name="pGenero" Mode="In" Type="String" />
+      <Parameter Name="pFecha_Nacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="pIngresos_Mes" Mode="In" Type="Int32" />
+      <Parameter Name="pUsuario" Mode="In" Type="String" />
+      <Parameter Name="pContrasena" Mode="In" Type="String" />
+      <Parameter Name="pID_Ubicacion" Mode="In" Type="Int32" />
+      <Parameter Name="pOcupacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Insertar_Propiedad" ReturnType="Collection(TECresModel.SP_Insertar_Propiedad_Result)">
+      <Parameter Name="pPrecio" Mode="In" Type="Int32" />
+      <Parameter Name="pDireccion_Exacta" Mode="In" Type="String" />
+      <Parameter Name="pTitulo" Mode="In" Type="String" />
+      <Parameter Name="pParqueo_Visitas" Mode="In" Type="Boolean" />
+      <Parameter Name="pNiveles" Mode="In" Type="Int32" />
+      <Parameter Name="pPiscina" Mode="In" Type="Boolean" />
+      <Parameter Name="pGimnasio" Mode="In" Type="Boolean" />
+      <Parameter Name="pTamano_Terreno" Mode="In" Type="Int32" />
+      <Parameter Name="pTamano_Construccion" Mode="In" Type="Int32" />
+      <Parameter Name="pCant_Habitaciones" Mode="In" Type="Int32" />
+      <Parameter Name="pCant_Banos" Mode="In" Type="Int32" />
+      <Parameter Name="pCant_Parqueos" Mode="In" Type="Int32" />
+      <Parameter Name="pDescripcion" Mode="In" Type="String" />
+      <Parameter Name="pFoto_Principal" Mode="In" Type="String" />
+      <Parameter Name="pID_Ubicacion" Mode="In" Type="Int32" />
+      <Parameter Name="pNombre_Inmueble" Mode="In" Type="String" />
+      <Parameter Name="pCedula_Cliente" Mode="In" Type="Int32" />
+      <Parameter Name="pNombrePiso" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <ComplexType Name="AnuncioEstadistica_Result">
+    <Property Type="Int32" Name="Visitas" Nullable="true" />
+    <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="NombrePM" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Edad_Max" Nullable="true" />
+    <Property Type="Int32" Name="Edad_Min" Nullable="true" />
+    <Property Type="Int32" Name="Ingresos" Nullable="true" />
+    <Property Type="String" Name="Genero" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Provincia" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Canton" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Distrito" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Finalidad" Nullable="false" MaxLength="15" />
+    <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="AnunciosCliente_Result">
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ID_ANUN" Nullable="false" />
+    <Property Type="Int32" Name="ID_Propiedad" Nullable="false" />
+    <Property Type="String" Name="Clasificacion" Nullable="false" MaxLength="15" />
+    <Property Type="Boolean" Name="Aprobado" Nullable="true" />
+    <Property Type="Int32" Name="Tarjeta_Credito" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Nombre1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Nombre_Publico" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="AnuncioSinEstadisticas_Result">
+    <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="NombrePublico" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Edad_Max" Nullable="true" />
+    <Property Type="Int32" Name="Edad_Min" Nullable="true" />
+    <Property Type="String" Name="Genero" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Ingresos" Nullable="true" />
+    <Property Type="String" Name="Provincia" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Canton" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Distrito" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Finalidad" Nullable="false" MaxLength="15" />
+    <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="AnunciosPropiedad_Result">
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="CompradorDatos_Result">
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Apellido2" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Genero" Nullable="false" MaxLength="30" />
+    <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="Ingresos_Mes" Nullable="false" />
+    <Property Type="String" Name="Provincia" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Canton" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Distrito" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="MensajesCliente_Result">
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Apellido11" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="PropiedadCompleta_Result">
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Tipo_Piso" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Nombre_Inmueble" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Provincia" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Canton" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Distrito" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Direccion_Exacta" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="Tamano_Terreno" Nullable="true" />
+    <Property Type="Int32" Name="Tamano_Construccion" Nullable="true" />
+    <Property Type="Int32" Name="Cant_Banos" Nullable="true" />
+    <Property Type="Int32" Name="Cant_Habitaciones" Nullable="true" />
+    <Property Type="Int32" Name="Cant_Parqueos" Nullable="true" />
+    <Property Type="Boolean" Name="Gimnasio" Nullable="true" />
+    <Property Type="Boolean" Name="Piscina" Nullable="true" />
+    <Property Type="Boolean" Name="Parqueo_Visitas" Nullable="true" />
+    <Property Type="Int32" Name="Niveles" Nullable="true" />
+    <Property Type="Int32" Name="Precio" Nullable="true" />
+    <Property Type="Int32" Name="ID_PROP" Nullable="true" />
+    <Property Type="String" Name="Nombre_Cliente" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido1_Cliente" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido2_Cliente" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="ID_Cliente" Nullable="true" />
+    <Property Type="Int32" Name="ID_ANU" Nullable="false" />
+    <Property Type="String" Name="Nombre_ANU" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Clasificacion" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="Nombre_Vendedor" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido1_Vendedor" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido2_Vendedor" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="PropiedadesBusqueda_Result">
+    <Property Type="String" Name="Titulo" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="ID_Propiedad" Nullable="false" />
+    <Property Type="String" Name="Direccion_Exacta" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="Tamano_Construccion" Nullable="false" />
+    <Property Type="Int32" Name="Tamano_Terreno" Nullable="false" />
+    <Property Type="String" Name="Provincia" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Canton" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Distrito" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="PropiedadesCliente_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="Precio" Nullable="false" />
+    <Property Type="String" Name="Direccion_Exacta" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Titulo" Nullable="false" MaxLength="30" />
+    <Property Type="Boolean" Name="Parqueo_Visitas" Nullable="false" />
+    <Property Type="Int32" Name="Niveles" Nullable="false" />
+    <Property Type="Boolean" Name="Piscina" Nullable="false" />
+    <Property Type="Boolean" Name="Gimnasio" Nullable="false" />
+    <Property Type="Int32" Name="Tamano_Terreno" Nullable="false" />
+    <Property Type="Int32" Name="Tamano_Construccion" Nullable="false" />
+    <Property Type="Int32" Name="Cant_Habitaciones" Nullable="false" />
+    <Property Type="Int32" Name="Cant_Banos" Nullable="false" />
+    <Property Type="Int32" Name="Cant_Parqueos" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="350" />
+    <Property Type="String" Name="Foto_Principal" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="ID_Ubicacion" Nullable="false" />
+    <Property Type="String" Name="Nombre_Inmueble" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Cedula_Cliente" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ReportesFacturas_Result">
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="350" />
+    <Property Type="Int32" Name="Monto" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ReportesVencidos_Result">
+    <Property Type="String" Name="NombreCliente" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="NombreVendedor" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Fecha_Fin" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_Insertar_Comprador_Result">
+    <Property Type="String" Name="ErrorProcedimiento" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="TipoError" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="SP_Insertar_Propiedad_Result">
+    <Property Type="String" Name="ErrorProcedimiento" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="TipoError" Nullable="true" MaxLength="4000" />
+  </ComplexType>
 </Schema>

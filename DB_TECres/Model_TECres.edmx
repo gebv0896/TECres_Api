@@ -433,6 +433,112 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="AnuncioEstadistica" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Anu" Type="int" Mode="In" />
+        </Function>
+        <Function Name="AnunciosCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CedulaCliente" Type="int" Mode="In" />
+        </Function>
+        <Function Name="AnuncioSinEstadisticas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Anu" Type="int" Mode="In" />
+        </Function>
+        <Function Name="AnunciosPropiedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Prop" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CantonesPorProvincia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Provin" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="CompradorDatos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Comprador" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DistritosPorCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Provin" Type="varchar" Mode="In" />
+          <Parameter Name="Cant" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="MensajesCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CedulaCliente" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PropiedadCompleta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Prop" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PropiedadesBusqueda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Cant_Hab" Type="int" Mode="In" />
+          <Parameter Name="PrecMin" Type="int" Mode="In" />
+          <Parameter Name="PrecMax" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PropiedadesCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Cedula" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Provincias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ReportesFacturas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaIni" Type="datetime" Mode="In" />
+          <Parameter Name="FechaFin" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="ReportesVencidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaHoy" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_Insertar_Comprador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="pNombre" Type="varchar" Mode="In" />
+          <Parameter Name="pApellido1" Type="varchar" Mode="In" />
+          <Parameter Name="pApellido2" Type="varchar" Mode="In" />
+          <Parameter Name="pGenero" Type="varchar" Mode="In" />
+          <Parameter Name="pFecha_Nacimiento" Type="datetime" Mode="In" />
+          <Parameter Name="pIngresos_Mes" Type="int" Mode="In" />
+          <Parameter Name="pUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="pContrasena" Type="varchar" Mode="In" />
+          <Parameter Name="pID_Ubicacion" Type="int" Mode="In" />
+          <Parameter Name="pOcupacion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Insertar_Propiedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="pPrecio" Type="int" Mode="In" />
+          <Parameter Name="pDireccion_Exacta" Type="varchar" Mode="In" />
+          <Parameter Name="pTitulo" Type="varchar" Mode="In" />
+          <Parameter Name="pParqueo_Visitas" Type="bit" Mode="In" />
+          <Parameter Name="pNiveles" Type="int" Mode="In" />
+          <Parameter Name="pPiscina" Type="bit" Mode="In" />
+          <Parameter Name="pGimnasio" Type="bit" Mode="In" />
+          <Parameter Name="pTamano_Terreno" Type="int" Mode="In" />
+          <Parameter Name="pTamano_Construccion" Type="int" Mode="In" />
+          <Parameter Name="pCant_Habitaciones" Type="int" Mode="In" />
+          <Parameter Name="pCant_Banos" Type="int" Mode="In" />
+          <Parameter Name="pCant_Parqueos" Type="int" Mode="In" />
+          <Parameter Name="pDescripcion" Type="varchar" Mode="In" />
+          <Parameter Name="pFoto_Principal" Type="varchar" Mode="In" />
+          <Parameter Name="pID_Ubicacion" Type="int" Mode="In" />
+          <Parameter Name="pNombre_Inmueble" Type="varchar" Mode="In" />
+          <Parameter Name="pCedula_Cliente" Type="int" Mode="In" />
+          <Parameter Name="pNombrePiso" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="spPrueba" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="TECresModelStoreContainer">
           <EntitySet Name="ADMINISTRADOR" EntityType="Self.ADMINISTRADOR" Schema="dbo" store:Type="Tables" />
@@ -1096,7 +1202,276 @@
             <End Role="TIENE_PISO" EntitySet="TIENE_PISO" />
           </AssociationSet>
           <FunctionImport Name="spPrueba" ReturnType="Collection(String)" />
+          <FunctionImport Name="AnuncioEstadistica" ReturnType="Collection(TECresModel.AnuncioEstadistica_Result)">
+          <Parameter Name="ID_Anu" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="AnunciosCliente" ReturnType="Collection(TECresModel.AnunciosCliente_Result)">
+          <Parameter Name="CedulaCliente" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="AnuncioSinEstadisticas" ReturnType="Collection(TECresModel.AnuncioSinEstadisticas_Result)">
+          <Parameter Name="ID_Anu" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="AnunciosPropiedad" ReturnType="Collection(TECresModel.AnunciosPropiedad_Result)">
+          <Parameter Name="ID_Prop" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CantonesPorProvincia" ReturnType="Collection(String)">
+          <Parameter Name="Provin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="CompradorDatos" ReturnType="Collection(TECresModel.CompradorDatos_Result)">
+          <Parameter Name="ID_Comprador" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DistritosPorCanton" ReturnType="Collection(String)">
+            <Parameter Name="Provin" Mode="In" Type="String" />
+            <Parameter Name="Cant" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="MensajesCliente" ReturnType="Collection(TECresModel.MensajesCliente_Result)">
+          <Parameter Name="CedulaCliente" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PropiedadCompleta" ReturnType="Collection(TECresModel.PropiedadCompleta_Result)">
+          <Parameter Name="ID_Prop" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PropiedadesBusqueda" ReturnType="Collection(TECresModel.PropiedadesBusqueda_Result)">
+            <Parameter Name="Cant_Hab" Mode="In" Type="Int32" />
+            <Parameter Name="PrecMin" Mode="In" Type="Int32" />
+            <Parameter Name="PrecMax" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PropiedadesCliente" ReturnType="Collection(TECresModel.PropiedadesCliente_Result)">
+          <Parameter Name="Cedula" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Provincias" ReturnType="Collection(String)" />
+          <FunctionImport Name="ReportesFacturas" ReturnType="Collection(TECresModel.ReportesFacturas_Result)">
+            <Parameter Name="FechaIni" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaFin" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="ReportesVencidos" ReturnType="Collection(TECresModel.ReportesVencidos_Result)">
+          <Parameter Name="FechaHoy" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TECresModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TECresModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Insertar_Comprador" ReturnType="Collection(TECresModel.SP_Insertar_Comprador_Result)">
+            <Parameter Name="pNombre" Mode="In" Type="String" />
+            <Parameter Name="pApellido1" Mode="In" Type="String" />
+            <Parameter Name="pApellido2" Mode="In" Type="String" />
+            <Parameter Name="pGenero" Mode="In" Type="String" />
+            <Parameter Name="pFecha_Nacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="pIngresos_Mes" Mode="In" Type="Int32" />
+            <Parameter Name="pUsuario" Mode="In" Type="String" />
+            <Parameter Name="pContrasena" Mode="In" Type="String" />
+            <Parameter Name="pID_Ubicacion" Mode="In" Type="Int32" />
+            <Parameter Name="pOcupacion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Insertar_Propiedad" ReturnType="Collection(TECresModel.SP_Insertar_Propiedad_Result)">
+            <Parameter Name="pPrecio" Mode="In" Type="Int32" />
+            <Parameter Name="pDireccion_Exacta" Mode="In" Type="String" />
+            <Parameter Name="pTitulo" Mode="In" Type="String" />
+            <Parameter Name="pParqueo_Visitas" Mode="In" Type="Boolean" />
+            <Parameter Name="pNiveles" Mode="In" Type="Int32" />
+            <Parameter Name="pPiscina" Mode="In" Type="Boolean" />
+            <Parameter Name="pGimnasio" Mode="In" Type="Boolean" />
+            <Parameter Name="pTamano_Terreno" Mode="In" Type="Int32" />
+            <Parameter Name="pTamano_Construccion" Mode="In" Type="Int32" />
+            <Parameter Name="pCant_Habitaciones" Mode="In" Type="Int32" />
+            <Parameter Name="pCant_Banos" Mode="In" Type="Int32" />
+            <Parameter Name="pCant_Parqueos" Mode="In" Type="Int32" />
+            <Parameter Name="pDescripcion" Mode="In" Type="String" />
+            <Parameter Name="pFoto_Principal" Mode="In" Type="String" />
+            <Parameter Name="pID_Ubicacion" Mode="In" Type="Int32" />
+            <Parameter Name="pNombre_Inmueble" Mode="In" Type="String" />
+            <Parameter Name="pCedula_Cliente" Mode="In" Type="Int32" />
+            <Parameter Name="pNombrePiso" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="AnuncioEstadistica_Result">
+          <Property Type="Int32" Name="Visitas" Nullable="true" />
+          <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="NombrePM" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="Edad_Max" Nullable="true" />
+          <Property Type="Int32" Name="Edad_Min" Nullable="true" />
+          <Property Type="Int32" Name="Ingresos" Nullable="true" />
+          <Property Type="String" Name="Genero" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Provincia" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Canton" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Distrito" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Finalidad" Nullable="false" MaxLength="15" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="AnunciosCliente_Result">
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ID_ANUN" Nullable="false" />
+          <Property Type="Int32" Name="ID_Propiedad" Nullable="false" />
+          <Property Type="String" Name="Clasificacion" Nullable="false" MaxLength="15" />
+          <Property Type="Boolean" Name="Aprobado" Nullable="true" />
+          <Property Type="Int32" Name="Tarjeta_Credito" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Nombre1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Apellido1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Apellido2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Nombre_Publico" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="AnuncioSinEstadisticas_Result">
+          <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="NombrePublico" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="Edad_Max" Nullable="true" />
+          <Property Type="Int32" Name="Edad_Min" Nullable="true" />
+          <Property Type="String" Name="Genero" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="Ingresos" Nullable="true" />
+          <Property Type="String" Name="Provincia" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Canton" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Distrito" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Finalidad" Nullable="false" MaxLength="15" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="AnunciosPropiedad_Result">
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="CompradorDatos_Result">
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Apellido2" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Genero" Nullable="false" MaxLength="30" />
+          <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="Ingresos_Mes" Nullable="false" />
+          <Property Type="String" Name="Provincia" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Canton" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Distrito" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="MensajesCliente_Result">
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Apellido11" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="PropiedadCompleta_Result">
+          <Property Type="String" Name="Titulo" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Tipo_Piso" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Nombre_Inmueble" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Provincia" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Canton" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Distrito" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Direccion_Exacta" Nullable="true" MaxLength="150" />
+          <Property Type="Int32" Name="Tamano_Terreno" Nullable="true" />
+          <Property Type="Int32" Name="Tamano_Construccion" Nullable="true" />
+          <Property Type="Int32" Name="Cant_Banos" Nullable="true" />
+          <Property Type="Int32" Name="Cant_Habitaciones" Nullable="true" />
+          <Property Type="Int32" Name="Cant_Parqueos" Nullable="true" />
+          <Property Type="Boolean" Name="Gimnasio" Nullable="true" />
+          <Property Type="Boolean" Name="Piscina" Nullable="true" />
+          <Property Type="Boolean" Name="Parqueo_Visitas" Nullable="true" />
+          <Property Type="Int32" Name="Niveles" Nullable="true" />
+          <Property Type="Int32" Name="Precio" Nullable="true" />
+          <Property Type="Int32" Name="ID_PROP" Nullable="true" />
+          <Property Type="String" Name="Nombre_Cliente" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Apellido1_Cliente" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Apellido2_Cliente" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="ID_Cliente" Nullable="true" />
+          <Property Type="Int32" Name="ID_ANU" Nullable="false" />
+          <Property Type="String" Name="Nombre_ANU" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Clasificacion" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Nombre_Vendedor" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Apellido1_Vendedor" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Apellido2_Vendedor" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="PropiedadesBusqueda_Result">
+          <Property Type="String" Name="Titulo" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="ID_Propiedad" Nullable="false" />
+          <Property Type="String" Name="Direccion_Exacta" Nullable="false" MaxLength="150" />
+          <Property Type="Int32" Name="Tamano_Construccion" Nullable="false" />
+          <Property Type="Int32" Name="Tamano_Terreno" Nullable="false" />
+          <Property Type="String" Name="Provincia" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Canton" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Distrito" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Tipo_Anuncio" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="PropiedadesCliente_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="Precio" Nullable="false" />
+          <Property Type="String" Name="Direccion_Exacta" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="Titulo" Nullable="false" MaxLength="30" />
+          <Property Type="Boolean" Name="Parqueo_Visitas" Nullable="false" />
+          <Property Type="Int32" Name="Niveles" Nullable="false" />
+          <Property Type="Boolean" Name="Piscina" Nullable="false" />
+          <Property Type="Boolean" Name="Gimnasio" Nullable="false" />
+          <Property Type="Int32" Name="Tamano_Terreno" Nullable="false" />
+          <Property Type="Int32" Name="Tamano_Construccion" Nullable="false" />
+          <Property Type="Int32" Name="Cant_Habitaciones" Nullable="false" />
+          <Property Type="Int32" Name="Cant_Banos" Nullable="false" />
+          <Property Type="Int32" Name="Cant_Parqueos" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="350" />
+          <Property Type="String" Name="Foto_Principal" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="ID_Ubicacion" Nullable="false" />
+          <Property Type="String" Name="Nombre_Inmueble" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Cedula_Cliente" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ReportesFacturas_Result">
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Apellido1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Titulo" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="350" />
+          <Property Type="Int32" Name="Monto" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="ReportesVencidos_Result">
+          <Property Type="String" Name="NombreCliente" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Titulo" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="NombreVendedor" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Fecha_Fin" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Insertar_Comprador_Result">
+          <Property Type="String" Name="ErrorProcedimiento" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="TipoError" Nullable="true" MaxLength="4000" />
+        </ComplexType>
+        <ComplexType Name="SP_Insertar_Propiedad_Result">
+          <Property Type="String" Name="ErrorProcedimiento" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="TipoError" Nullable="true" MaxLength="4000" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1320,6 +1695,237 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="spPrueba" FunctionName="TECresModel.Store.spPrueba" />
+          <FunctionImportMapping FunctionImportName="AnuncioEstadistica" FunctionName="TECresModel.Store.AnuncioEstadistica">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.AnuncioEstadistica_Result">
+                <ScalarProperty Name="Visitas" ColumnName="Visitas" />
+                <ScalarProperty Name="Tipo_Anuncio" ColumnName="Tipo_Anuncio" />
+                <ScalarProperty Name="NombrePM" ColumnName="NombrePM" />
+                <ScalarProperty Name="Edad_Max" ColumnName="Edad_Max" />
+                <ScalarProperty Name="Edad_Min" ColumnName="Edad_Min" />
+                <ScalarProperty Name="Ingresos" ColumnName="Ingresos" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="Canton" ColumnName="Canton" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+                <ScalarProperty Name="Finalidad" ColumnName="Finalidad" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AnunciosCliente" FunctionName="TECresModel.Store.AnunciosCliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.AnunciosCliente_Result">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="ID_ANUN" ColumnName="ID_ANUN" />
+                <ScalarProperty Name="ID_Propiedad" ColumnName="ID_Propiedad" />
+                <ScalarProperty Name="Clasificacion" ColumnName="Clasificacion" />
+                <ScalarProperty Name="Aprobado" ColumnName="Aprobado" />
+                <ScalarProperty Name="Tarjeta_Credito" ColumnName="Tarjeta_Credito" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+                <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+                <ScalarProperty Name="Nombre_Publico" ColumnName="Nombre_Publico" />
+                <ScalarProperty Name="Tipo_Anuncio" ColumnName="Tipo_Anuncio" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AnuncioSinEstadisticas" FunctionName="TECresModel.Store.AnuncioSinEstadisticas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.AnuncioSinEstadisticas_Result">
+                <ScalarProperty Name="Tipo_Anuncio" ColumnName="Tipo_Anuncio" />
+                <ScalarProperty Name="NombrePublico" ColumnName="NombrePublico" />
+                <ScalarProperty Name="Edad_Max" ColumnName="Edad_Max" />
+                <ScalarProperty Name="Edad_Min" ColumnName="Edad_Min" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Ingresos" ColumnName="Ingresos" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="Canton" ColumnName="Canton" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+                <ScalarProperty Name="Finalidad" ColumnName="Finalidad" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AnunciosPropiedad" FunctionName="TECresModel.Store.AnunciosPropiedad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.AnunciosPropiedad_Result">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+                <ScalarProperty Name="Tipo_Anuncio" ColumnName="Tipo_Anuncio" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CantonesPorProvincia" FunctionName="TECresModel.Store.CantonesPorProvincia" />
+          <FunctionImportMapping FunctionImportName="CompradorDatos" FunctionName="TECresModel.Store.CompradorDatos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.CompradorDatos_Result">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+                <ScalarProperty Name="Ingresos_Mes" ColumnName="Ingresos_Mes" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="Canton" ColumnName="Canton" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DistritosPorCanton" FunctionName="TECresModel.Store.DistritosPorCanton" />
+          <FunctionImportMapping FunctionImportName="MensajesCliente" FunctionName="TECresModel.Store.MensajesCliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.MensajesCliente_Result">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Apellido11" ColumnName="Apellido11" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PropiedadCompleta" FunctionName="TECresModel.Store.PropiedadCompleta">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.PropiedadCompleta_Result">
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Tipo_Piso" ColumnName="Tipo_Piso" />
+                <ScalarProperty Name="Nombre_Inmueble" ColumnName="Nombre_Inmueble" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="Canton" ColumnName="Canton" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+                <ScalarProperty Name="Direccion_Exacta" ColumnName="Direccion_Exacta" />
+                <ScalarProperty Name="Tamano_Terreno" ColumnName="Tamano_Terreno" />
+                <ScalarProperty Name="Tamano_Construccion" ColumnName="Tamano_Construccion" />
+                <ScalarProperty Name="Cant_Banos" ColumnName="Cant_Banos" />
+                <ScalarProperty Name="Cant_Habitaciones" ColumnName="Cant_Habitaciones" />
+                <ScalarProperty Name="Cant_Parqueos" ColumnName="Cant_Parqueos" />
+                <ScalarProperty Name="Gimnasio" ColumnName="Gimnasio" />
+                <ScalarProperty Name="Piscina" ColumnName="Piscina" />
+                <ScalarProperty Name="Parqueo_Visitas" ColumnName="Parqueo_Visitas" />
+                <ScalarProperty Name="Niveles" ColumnName="Niveles" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="ID_PROP" ColumnName="ID_PROP" />
+                <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+                <ScalarProperty Name="Apellido1_Cliente" ColumnName="Apellido1_Cliente" />
+                <ScalarProperty Name="Apellido2_Cliente" ColumnName="Apellido2_Cliente" />
+                <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
+                <ScalarProperty Name="ID_ANU" ColumnName="ID_ANU" />
+                <ScalarProperty Name="Nombre_ANU" ColumnName="Nombre_ANU" />
+                <ScalarProperty Name="Tipo_Anuncio" ColumnName="Tipo_Anuncio" />
+                <ScalarProperty Name="Clasificacion" ColumnName="Clasificacion" />
+                <ScalarProperty Name="Nombre_Vendedor" ColumnName="Nombre_Vendedor" />
+                <ScalarProperty Name="Apellido1_Vendedor" ColumnName="Apellido1_Vendedor" />
+                <ScalarProperty Name="Apellido2_Vendedor" ColumnName="Apellido2_Vendedor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PropiedadesBusqueda" FunctionName="TECresModel.Store.PropiedadesBusqueda">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.PropiedadesBusqueda_Result">
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="ID_Propiedad" ColumnName="ID_Propiedad" />
+                <ScalarProperty Name="Direccion_Exacta" ColumnName="Direccion_Exacta" />
+                <ScalarProperty Name="Tamano_Construccion" ColumnName="Tamano_Construccion" />
+                <ScalarProperty Name="Tamano_Terreno" ColumnName="Tamano_Terreno" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="Canton" ColumnName="Canton" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+                <ScalarProperty Name="Tipo_Anuncio" ColumnName="Tipo_Anuncio" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PropiedadesCliente" FunctionName="TECresModel.Store.PropiedadesCliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.PropiedadesCliente_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Direccion_Exacta" ColumnName="Direccion_Exacta" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Parqueo_Visitas" ColumnName="Parqueo_Visitas" />
+                <ScalarProperty Name="Niveles" ColumnName="Niveles" />
+                <ScalarProperty Name="Piscina" ColumnName="Piscina" />
+                <ScalarProperty Name="Gimnasio" ColumnName="Gimnasio" />
+                <ScalarProperty Name="Tamano_Terreno" ColumnName="Tamano_Terreno" />
+                <ScalarProperty Name="Tamano_Construccion" ColumnName="Tamano_Construccion" />
+                <ScalarProperty Name="Cant_Habitaciones" ColumnName="Cant_Habitaciones" />
+                <ScalarProperty Name="Cant_Banos" ColumnName="Cant_Banos" />
+                <ScalarProperty Name="Cant_Parqueos" ColumnName="Cant_Parqueos" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Foto_Principal" ColumnName="Foto_Principal" />
+                <ScalarProperty Name="ID_Ubicacion" ColumnName="ID_Ubicacion" />
+                <ScalarProperty Name="Nombre_Inmueble" ColumnName="Nombre_Inmueble" />
+                <ScalarProperty Name="Cedula_Cliente" ColumnName="Cedula_Cliente" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Provincias" FunctionName="TECresModel.Store.Provincias" />
+          <FunctionImportMapping FunctionImportName="ReportesFacturas" FunctionName="TECresModel.Store.ReportesFacturas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.ReportesFacturas_Result">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ReportesVencidos" FunctionName="TECresModel.Store.ReportesVencidos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.ReportesVencidos_Result">
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="NombreVendedor" ColumnName="NombreVendedor" />
+                <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="TECresModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="TECresModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="TECresModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="TECresModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="TECresModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Insertar_Comprador" FunctionName="TECresModel.Store.SP_Insertar_Comprador">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.SP_Insertar_Comprador_Result">
+                <ScalarProperty Name="ErrorProcedimiento" ColumnName="ErrorProcedimiento" />
+                <ScalarProperty Name="TipoError" ColumnName="TipoError" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Insertar_Propiedad" FunctionName="TECresModel.Store.SP_Insertar_Propiedad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TECresModel.SP_Insertar_Propiedad_Result">
+                <ScalarProperty Name="ErrorProcedimiento" ColumnName="ErrorProcedimiento" />
+                <ScalarProperty Name="TipoError" ColumnName="TipoError" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="TECresModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="TECresModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -59,10 +59,25 @@
     <Compile Include="ANUNCIO.cs">
       <DependentUpon>Model_TECres.tt</DependentUpon>
     </Compile>
+    <Compile Include="AnuncioEstadistica_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AnunciosCliente_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AnuncioSinEstadisticas_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AnunciosPropiedad_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
     <Compile Include="CLIENTE.cs">
       <DependentUpon>Model_TECres.tt</DependentUpon>
     </Compile>
     <Compile Include="COMPRADOR.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompradorDatos_Result.cs">
       <DependentUpon>Model_TECres.tt</DependentUpon>
     </Compile>
     <Compile Include="FACTURA.cs">
@@ -72,6 +87,9 @@
       <DependentUpon>Model_TECres.tt</DependentUpon>
     </Compile>
     <Compile Include="MENSAJE.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MensajesCliente_Result.cs">
       <DependentUpon>Model_TECres.tt</DependentUpon>
     </Compile>
     <Compile Include="Model_TECres.Context.cs">
@@ -99,7 +117,34 @@
     <Compile Include="PROPIEDAD.cs">
       <DependentUpon>Model_TECres.tt</DependentUpon>
     </Compile>
+    <Compile Include="PropiedadCompleta_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropiedadesBusqueda_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropiedadesCliente_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
     <Compile Include="PUBLICO_META.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesFacturas_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesVencidos_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Insertar_Comprador_Result.cs">
+      <DependentUpon>Model_TECres.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Insertar_Propiedad_Result.cs">
       <DependentUpon>Model_TECres.tt</DependentUpon>
     </Compile>
     <Compile Include="TIENE_OCUPACION.cs">

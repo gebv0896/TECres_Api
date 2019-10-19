@@ -164,17 +164,32 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ADMINISTRADORController.cs" />
     <Compile Include="Controllers\ANUNCIOController.cs" />
+    <Compile Include="Controllers\AnuncioEstadisticaController.cs" />
+    <Compile Include="Controllers\AnunciosClienteController.cs" />
+    <Compile Include="Controllers\AnunciosPropiedadController.cs" />
+    <Compile Include="Controllers\AnunciosSinEstadisticaController.cs" />
     <Compile Include="Controllers\CLIENTEController.cs" />
     <Compile Include="Controllers\COMPRADORController.cs" />
+    <Compile Include="Controllers\CompradorDatosController.cs" />
+    <Compile Include="Controllers\DistritosCantonController.cs" />
     <Compile Include="Controllers\FACTURAController.cs" />
     <Compile Include="Controllers\FOTOController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InsertarCompradorController.cs" />
+    <Compile Include="Controllers\InsertarPropiedadController.cs" />
     <Compile Include="Controllers\MENSAJEController.cs" />
     <Compile Include="Controllers\OCUPACIONController.cs" />
     <Compile Include="Controllers\PERFIL_DE_CLIENTEController.cs" />
+    <Compile Include="Controllers\PropiedadCompletaController.cs" />
     <Compile Include="Controllers\PROPIEDADController.cs" />
+    <Compile Include="Controllers\PropiedadesBusquedaController.cs" />
+    <Compile Include="Controllers\PropiedadesClienteController.cs" />
+    <Compile Include="Controllers\ProvinciasController.cs" />
     <Compile Include="Controllers\pruebaController.cs" />
     <Compile Include="Controllers\PUBLICO_METAController.cs" />
+    <Compile Include="Controllers\CantonesProvinciaController.cs" />
+    <Compile Include="Controllers\ReportesFacturasController.cs" />
+    <Compile Include="Controllers\ReportesVencidosController.cs" />
     <Compile Include="Controllers\TIENE_OCUPACIONController.cs" />
     <Compile Include="Controllers\TIENE_PISOController.cs" />
     <Compile Include="Controllers\TIPO_ANUNCIOController.cs" />
@@ -185,7 +200,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\MensajesClienteController.cs" />
+    <Compile Include="Models\spAnuncioEstadisticaModel.cs" />
+    <Compile Include="Models\spAnunciosClienteModel.cs" />
+    <Compile Include="Models\spAnunciosPropiedadModel.cs" />
+    <Compile Include="Models\spAnunciosSinEstadisticasModel.cs" />
+    <Compile Include="Models\spCompradorDatosModel.cs" />
+    <Compile Include="Models\spInsertarCompradorModelo.cs" />
+    <Compile Include="Models\spInsertarPropiedadModelo.cs" />
+    <Compile Include="Models\spMensajesClienteModel.cs" />
+    <Compile Include="Models\spPropiedadCompletaModel.cs" />
+    <Compile Include="Models\spCantonesPorProvinciaModel.cs" />
+    <Compile Include="Models\spDistritosPorCantonModel.cs" />
+    <Compile Include="Models\spPropiedadesBusquedaModel.cs" />
+    <Compile Include="Models\spProvinciaModel.cs" />
+    <Compile Include="Models\spPropiedadesClienteModel.cs" />
     <Compile Include="Models\spPruebaModel.cs" />
+    <Compile Include="Models\spReportesFacturasModel.cs" />
+    <Compile Include="Models\spReportesVencidosModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +250,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
